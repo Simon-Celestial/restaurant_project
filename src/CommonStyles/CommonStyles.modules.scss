@@ -1,0 +1,46 @@
+@import "../Variables/Variables.module";
+
+.button {
+  border-radius: 8px;
+  padding: 8px 25px;
+  font-size: 22px;
+  transition: background-color $transition,color $transition, margin-bottom $transition;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  &.yellowBtn {
+    background: $yellow;
+    &:hover {
+      margin-bottom: 8px;
+      background-color: white;
+    }
+  }
+  &.whiteBtn {
+    background: white;
+    &:hover {
+      margin-bottom: 8px;
+      background-color: $yellow;
+    }
+  }
+  &.blackBtn{
+    color: $yellow;
+    background-color: $black;
+    &:hover {
+      margin-bottom: 8px;
+      background-color: $yellow;
+      color: $black;
+    }
+  }
+  &.blackToWhiteBtn{
+    color: $yellow;
+    background-color: $black;
+    &:hover {
+      margin-bottom: 8px;
+      background-color: white;
+      color: $black;
+    }
+  }
+}

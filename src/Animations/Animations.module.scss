@@ -2,13 +2,22 @@
   0% {
     opacity: 1;
   }
-  50%{
+  50% {
     opacity: 0;
     transform: translateX(50%);
 
   }
-   100% {
-     opacity: 1;
-     transform: translateX(0);
-   }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes spinningLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,27 +1,10 @@
 @import "../../../Variables/Variables.module";
 @import "../../../Animations/Animations.module";
-
-.button {
-  border-radius: 8px;
-  padding: 8px 25px;
-  font-size: 22px;
-  transition: background-color $transition,color $transition, margin-bottom $transition;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  &.yellowBtn {
-    background: $yellow;
-    &:hover {
-      margin-bottom: 8px;
-      background-color: white;
-    }
-  }
-}
+@import "../../../CommonStyles/CommonStyles.modules";
 
 .headerWrapper {
   width: 100%;
-  padding: 0 30px;
+  padding: 15px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,6 +12,8 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 10;
+  border-bottom: 1px solid $yellow;
   .headerContent {
     display: flex;
     align-items: center;
@@ -45,6 +30,9 @@
       }
       &:nth-child(2) {
         justify-content: center;
+        background-color: $yellow;
+        width: 20%;
+        border-radius: 10px;
       }
       &:nth-child(3) {
         justify-content: end;
@@ -86,7 +74,7 @@
     display: flex;
     opacity: 0;
     pointer-events: none;
-    border-left: 1px solid white;
+    border-left: 1px solid $yellow;
     &.menuActive {
       right: 0;
       pointer-events: auto;

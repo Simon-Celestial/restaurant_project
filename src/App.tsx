@@ -1,8 +1,8 @@
-import {HomePage} from "./Layout/Pages/HomePage/HomePage.tsx";
+import MainRouter from "./router.tsx";
 
 export const App = () => {
   return (
-    <HomePage />
+    <MainRouter />
   )
 }
 

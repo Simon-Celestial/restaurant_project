@@ -3,11 +3,12 @@ import {FacebookLogo, InstagramLogo, List, Phone, TiktokLogo, TwitterLogo, X} fr
 import {useCallback, useState} from "react";
 
 export const Header = () => {
-    const [menuOpen,setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    const handleMenuOpen = useCallback(() => {
-        setMenuOpen(prev=> !prev);
-    },[setMenuOpen]);
+    const handleMenuOpen = useCallback((): void => {
+        setMenuOpen(prev => !prev);
+    }, [setMenuOpen]);
+
     return (
         <header className={styles.headerWrapper}>
             <div className={styles.headerContent}>
@@ -16,13 +17,13 @@ export const Header = () => {
                 </div>
                 <div className={styles.container}>
                     <a href={"/"}>
-                        <img src="https://stackshack.co.uk/wp-content/uploads/2023/03/stachshack-logo-updated.png"
-                             alt="Stack Shack logo"/>
+                        <img src="/images/logo.png"
+                             alt="Gourmet logo"/>
                     </a>
                 </div>
                 <div className={styles.container}>
                     <div className={styles.menuBtn} onClick={handleMenuOpen}>
-                        <List  weight="bold" />
+                        <List weight="bold"/>
                     </div>
                 </div>
             </div>
@@ -59,23 +60,23 @@ export const Header = () => {
                             <Phone weight="fill"/>
                         </a>
                         <div className={styles.iconsContainer}>
-                            <a href="https://www.facebook.com/stackshackuk">
+                            <a href="https://www.facebook.com" target="_blank">
                                 <FacebookLogo/>
                             </a>
-                            <a href="https://www.instagram.com/stackshack.uk/">
+                            <a href="https://www.instagram.com" target="_blank">
                                 <InstagramLogo/>
                             </a>
-                            <a href="https://www.tiktok.com/@stackshack.uk">
+                            <a href="https://www.tiktok.com" target="_blank">
                                 <TiktokLogo/>
                             </a>
-                            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fstackshackuk">
+                            <a href="https://x.com" target="_blank">
                                 <TwitterLogo/>
                             </a>
                         </div>
 
                     </div>
                     <div className={styles.animatedContainer}>
-                        <img src="https://stackshack.co.uk/wp-content/uploads/2023/03/S_Yellow.gif"
+                        <img src="/images/food.gif"
                              alt="Animated logo"/>
                     </div>
 

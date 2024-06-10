@@ -1,0 +1,79 @@
+@import "../../../Variables/Variables.module";
+@import "../../../Animations/Animations.module";
+@import "../../../CommonStyles/CommonStyles.modules";
+
+.footerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 50px;
+  background-color: $black;
+  color: white;
+  border-top: 1px solid $yellow;
+  .footerContent{
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    align-items: center;
+    .textBlock {
+      font-size: 55px;
+      text-align: center;
+      max-width: 550px;
+      width: 100%;
+     }
+    .mailBlock{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 600px;
+      width: 100%;
+      .mailItem {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 20px;
+        a{
+          color: gray;
+          font-size: 18px;
+          transition: color $transition;
+          width: min-content;
+          &:hover {
+            color: $yellow;
+          }
+        }
+      }
+
+    }
+    .iconsBlock {
+      display: flex;
+      margin-left: auto;
+      flex-direction: column;
+      gap: 15px;
+      .icons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: end;
+        a {
+          &:hover {
+            svg {
+              color: white;
+              transform: scale(1.1) rotate(360deg);
+            }
+          }
+          svg {
+            color: $yellow;
+            font-size: 32px;
+            transition: color $transition,transform $transition;
+          }
+        }
+      }
+      p {
+        font-size: 22px;
+        color: $yellow;
+      }
+    }
+
+
+  }
+}
