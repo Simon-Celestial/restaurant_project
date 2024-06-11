@@ -2,41 +2,68 @@
   {
     "id": "31aS3",
     "name": "gourmet burgers",
-    "products": [],
+    "type": "burgers",
+    "products": [
+      {
+        "id": "asd2dS",
+        "title": "chicken burger",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-3-copyright-480x480.png"
+      },
+      {
+        "id": "3sadB",
+        "title": "black burger",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-4-copyright-480x480.png"
+      },
+      {
+        "id": "d43sDs",
+        "title": "fish burger",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-2-copyright-480x480.png"
+      },
+      {
+        "id": "b2aSd",
+        "title": "double burger",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-1-copyright-480x480.png"
+      }
+    ],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-3-copyright-480x480.png",
     "description": "Savor the ultimate burger experience with our gourmet creations, crafted with premium ingredients and innovative flavors to tantalize your taste buds."
   },
   {
-    "id": "31aS3",
+    "id": "32Bs3",
     "name": "gourmet pizzas",
+    "type": "pizzas",
     "products": [],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-17-copyright-480x480.png",
     "description": "Delight in our gourmet pizzas, where traditional techniques meet contemporary flair, offering a symphony of taste with every bite."
   },
   {
-    "id": "31aS3",
+    "id": "34sT3",
     "name": "gourmet hotdogs",
+    "type": "hotdogs",
     "products": [],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-21-copyright-480x480.png",
     "description": "Experience hotdogs like never before with our gourmet selection, featuring artisanal sausages and an array of unique, flavorful toppings."
   },
   {
-    "id": "31aS3",
+    "id": "2CYs1",
     "name": "gourmet dishes",
+    "type": "dishes",
     "products": [],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-9-copyright-480x480.png",
     "description": "Indulge in our gourmet dishes, where culinary artistry meets the finest ingredients, creating unforgettable dining moments."
   },
   {
-    "id": "31aS3",
+    "id": "OfdR3",
     "name": "gourmet coffees",
+    "type": "coffee",
     "products": [],
     "image": "https://res.cloudinary.com/de5w8iqms/image/upload/v1705237832/frontend-api/products/4bbe2360-b2de-11ee-b7ae-afbbfd36f49e.png",
     "description": "Enjoy our gourmet coffees, crafted with handpicked beans and roasted to perfection, delivering a rich and aromatic coffee experience."
   },
   {
-    "id": "31aS3",
+    "id": "tRfD3",
     "name": "gourmet snacks",
+    "type": "snacks",
     "products": [],
     "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast7.png",
     "description": "Treat yourself to our gourmet snacks, a delightful assortment of premium bites that perfectly complement any meal or occasion."

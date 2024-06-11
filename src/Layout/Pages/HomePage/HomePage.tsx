@@ -2,6 +2,8 @@ import styles from "./HomePage.module.scss";
 import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import {Link} from "react-router-dom";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import PRODUCTS_DATA from "/public/data/ProductsData/productsData.json";
 import {DoubleSection} from "../../Common/DoubleSection/DoubleSection.tsx";
 
@@ -10,6 +12,7 @@ interface Product {
     image: string;
     name: string;
     description: string;
+    type: string;
 }
 
 const products: Product[] = PRODUCTS_DATA;
@@ -76,12 +79,12 @@ export const HomePage = () => {
                         {products?.map(product => {
                             return (
                                 <div key={product?.id} className={styles.productWrapper}>
-                                    <div className={styles.productImage}>
+                                    <Link to={`/details/${product?.type}`} className={styles.productImage}>
                                         <img
                                             src={product?.image}
                                              alt={"image"}
                                         />
-                                    </div>
+                                    </Link>
                                     <div className={styles.productTitle}>
                                         <h1>{product?.name}</h1>
                                         <p>{product?.description}</p>

@@ -21,3 +21,16 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes textGlowing {
+  0% {
+    text-shadow: 0 0 10px white;
+  }
+  50% {
+    text-shadow: 0 0 0 white;
+
+  }
+  100% {
+    text-shadow: 0 0 10px white;
+  }
+}
