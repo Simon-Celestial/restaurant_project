@@ -6,3 +6,14 @@ export interface Product {
     type: string;
     products: { id: string, image: string, title: string }[];
 }
+
+export interface JobDetail {
+    header: string;
+    content: string;
+}
+
+export interface Job {
+    id: string;
+    title: string;
+    details: JobDetail[];
+}

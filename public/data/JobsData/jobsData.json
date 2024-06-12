@@ -1,0 +1,74 @@
+[
+  {
+    "id" : "31asd",
+    "title": "TEAM MEMBER",
+    "details": [
+      {
+        "header": "JOB DESCRIPTION",
+        "content": "<p>Aside from your specific role duties. Your duties will also include customer service and general assistant tasks – training will be provided where required. This is a fast-paced environment, and you will need to have the personality and character to match.</p><ul><li>Provide excellent customer service (face to face or telephone)</li><li>Ensure orders are ready in a timely manner for our delivery service</li><li>Preparing and cooking the foods</li><li>Operating the tills and POS order system. Taking payment in cash and cards.</li><li>Maintaining dining areas and kitchen areas, including clearing and cleaning tables, emptying trash cans, and washing</li><li>Promoting positive guest relations</li><li>Check that all restaurant facilities, equipment, or furnishings are in good order.</li></ul><p>Experience :</p><ul><li>Discounted or free food</li><li>On-site parking</li></ul><p>Benefits :</p><ul><li>Food preparation: 1 year (preferred)</li><li>Customer Service: 1 year (preferred)</li></ul>"
+      },
+      {
+        "header": "LOCATION",
+        "content": "Azerbaijan, Baku: reliably commute or plan to relocate before starting work"
+      },
+      {
+        "header": "RATE OF PAY & HOURS",
+        "content": "<ul><li>Job Type: Full Time</li><li>Salary: $0.53 - $0.85 per hour</li><li>12 hour shift</li><li>10 hour shift</li><li>Weekend availability</li></ul>"
+      }
+    ]
+  },
+  {
+    "id": "32bdf",
+    "title": "DELIVERY GUY",
+    "details": [
+      {
+        "header": "JOB DESCRIPTION",
+        "content": "<p>As a delivery guy, your primary responsibility will be delivering food orders to customers promptly and courteously. You will also handle some customer service tasks and assist in the kitchen during downtime.</p><ul><li>Deliver food orders to customers in a timely manner</li><li>Ensure order accuracy and customer satisfaction</li><li>Handle payments and provide receipts</li><li>Maintain delivery vehicle cleanliness</li><li>Assist in the kitchen and with customer service tasks when not delivering</li></ul><p>Experience :</p><ul><li>Previous delivery or driving experience (preferred)</li><li>Good knowledge of local area</li></ul><p>Benefits :</p><ul><li>Company-provided vehicle</li><li>Fuel allowance</li></ul>"
+      },
+      {
+        "header": "LOCATION",
+        "content": "Azerbaijan, Baku: reliably commute or plan to relocate before starting work"
+      },
+      {
+        "header": "RATE OF PAY & HOURS",
+        "content": "<ul><li>Job Type: Full Time</li><li>Salary: $0.50 - $0.75 per hour</li><li>12 hour shift</li><li>10 hour shift</li><li>Weekend availability</li></ul>"
+      }
+    ]
+  },
+  {
+    "id": "33xyz",
+    "title": "STEWARD",
+    "details": [
+      {
+        "header": "JOB DESCRIPTION",
+        "content": "<p>As a steward, you will be responsible for maintaining cleanliness and orderliness in the kitchen and dining areas. Your duties will include washing dishes, cleaning surfaces, and ensuring that all kitchen equipment is in good condition.</p><ul><li>Maintain cleanliness in the kitchen and dining areas</li><li>Wash dishes, pots, and utensils</li><li>Clean and sanitize food preparation areas</li><li>Assist with inventory management and ordering supplies</li><li>Ensure all kitchen equipment is in good working order</li></ul><p>Experience :</p><ul><li>Previous experience in a similar role (preferred)</li><li>Attention to detail and ability to work in a fast-paced environment</li></ul><p>Benefits :</p><ul><li>Discounted or free food</li><li>On-site parking</li></ul>"
+      },
+      {
+        "header": "LOCATION",
+        "content": "Azerbaijan, Baku: reliably commute or plan to relocate before starting work"
+      },
+      {
+        "header": "RATE OF PAY & HOURS",
+        "content": "<ul><li>Job Type: Full Time</li><li>Salary: $0.45 - $0.70 per hour</li><li>12 hour shift</li><li>10 hour shift</li><li>Weekend availability</li></ul>"
+      }
+    ]
+  },
+  {
+    "id": "34abc",
+    "title": "MANAGER",
+    "details": [
+      {
+        "header": "JOB DESCRIPTION",
+        "content": "<p>As a manager, you will be responsible for overseeing the daily operations of the restaurant, ensuring that everything runs smoothly and efficiently. Your duties will include managing staff, handling customer issues, and maintaining inventory and financial records.</p><ul><li>Oversee daily operations of the restaurant</li><li>Manage and train staff</li><li>Handle customer complaints and issues</li><li>Maintain inventory and order supplies</li><li>Ensure compliance with health and safety regulations</li><li>Monitor financial performance and prepare reports</li></ul><p>Experience :</p><ul><li>Previous management experience in a restaurant setting (required)</li><li>Strong leadership and communication skills</li></ul><p>Benefits :</p><ul><li>Competitive salary</li><li>Health insurance</li><li>Paid time off</li></ul>"
+      },
+      {
+        "header": "LOCATION",
+        "content": "Azerbaijan, Baku: reliably commute or plan to relocate before starting work"
+      },
+      {
+        "header": "RATE OF PAY & HOURS",
+        "content": "<ul><li>Job Type: Full Time</li><li>Salary: $1.00 - $1.50 per hour</li><li>10 hour shift</li><li>8 hour shift</li><li>Weekend availability</li></ul>"
+      }
+    ]
+  }
+]
