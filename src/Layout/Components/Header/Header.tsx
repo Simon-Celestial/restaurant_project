@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss";
 import {FacebookLogo, InstagramLogo, List, Phone, TiktokLogo, TwitterLogo, X} from "@phosphor-icons/react";
 import {useCallback, useState} from "react";
+import {Link} from "react-router-dom";
 
 export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -46,15 +47,15 @@ export const Header = () => {
                             <a href="/" className={styles.menuItem}>
                                 menu
                             </a>
-                            <a href="/" className={styles.menuItem}>
+                            <Link to={"/careers"} className={styles.menuItem}>
                                 careers
-                            </a>
+                            </Link>
                             <a href="/" className={styles.menuItem}>
                                 franchise
                             </a>
-                            <a href="/" className={styles.menuItem}>
+                            <Link to={"/contact"} className={styles.menuItem}>
                                 contact
-                            </a>
+                            </Link>
                         </div>
                         <a href="/" className={styles.menuItem}>
                             <Phone weight="fill"/>

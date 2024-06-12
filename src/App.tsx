@@ -1,8 +1,11 @@
 import MainRouter from "./router.tsx";
+import {DataContextProvider} from "./Context/DataContext.tsx";
 
 export const App = () => {
-  return (
-    <MainRouter />
-  )
+    return (
+        <DataContextProvider>
+            <MainRouter/>
+        </DataContextProvider>
+    )
 }
 

@@ -1,5 +1,5 @@
 import styles from "./PageNotFound.module.scss";
-const PageNotFound = () => {
+export const PageNotFound = () => {
     return (
         <div className={styles.pageWrapper}>
             <div className={styles.pageContent}>
@@ -10,4 +10,3 @@ const PageNotFound = () => {
     );
 };
 
-export default PageNotFound;

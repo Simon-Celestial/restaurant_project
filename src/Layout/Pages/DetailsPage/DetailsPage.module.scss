@@ -38,6 +38,10 @@
         .productImage {
           width: 100%;
           max-width: 500px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 480px;
           img {
             width: 100%;
             object-position: center;

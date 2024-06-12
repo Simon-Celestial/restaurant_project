@@ -2,22 +2,15 @@ import styles from "./HomePage.module.scss";
 import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import {Link} from "react-router-dom";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import PRODUCTS_DATA from "/public/data/ProductsData/productsData.json";
 import {DoubleSection} from "../../Common/DoubleSection/DoubleSection.tsx";
+import {useContext} from "react";
+import {DataContext} from "../../../Context/DataContext.tsx";
 
-interface Product {
-    id: string;
-    image: string;
-    name: string;
-    description: string;
-    type: string;
-}
-
-const products: Product[] = PRODUCTS_DATA;
 
 export const HomePage = () => {
+    const {
+        products
+    } = useContext(DataContext);
     return (
         <>
             <Header/>
@@ -82,7 +75,8 @@ export const HomePage = () => {
                                     <Link to={`/details/${product?.type}`} className={styles.productImage}>
                                         <img
                                             src={product?.image}
-                                             alt={"image"}
+                                            alt={"Product"}
+                                            loading={"lazy"}
                                         />
                                     </Link>
                                     <div className={styles.productTitle}>
@@ -105,8 +99,8 @@ export const HomePage = () => {
                 <section className={styles.formSection}>
                     <div className={styles.sectionContent}>
                         <div className={styles.blockWrapper}>
-                            <img className={`${styles.decoration} ${styles.sauce}`} src="https://stackshack.co.uk/wp-content/uploads/2023/03/SecretSauce.gif" alt="Image"/>
-                            <img className={`${styles.decoration} ${styles.hotDog}`} src="https://stackshack.co.uk/wp-content/uploads/2023/03/TopDog.gif" alt="Image"/>
+                            <img className={`${styles.decoration} ${styles.sauce}`} src="https://stackshack.co.uk/wp-content/uploads/2023/03/SecretSauce.gif" alt="Animated logo"/>
+                            <img className={`${styles.decoration} ${styles.hotDog}`} src="https://stackshack.co.uk/wp-content/uploads/2023/03/TopDog.gif" alt="Animated Logo"/>
                             <div className={styles.title}>
                                 <h1>SIGN UP TO OUR NEWSLETTER</h1>
                                 <p>Don't worry we will not spam you</p>

@@ -1,0 +1,118 @@
+@import "../../../CommonStyles/CommonStyles.modules";
+@import "../../../Variables/Variables.module";
+@import "../../../Animations/Animations.module";
+
+.contactMain  {
+  display: flex;
+  width: 100%;
+  padding: 165px 15px 50px 15px;
+  flex-direction: column;
+  background-color: $cream;
+  .contactSection {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    .sectionContent {
+      max-width: 850px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .titleBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $black;
+
+        h1 {
+          font-size: 125px;
+        }
+        p {
+          font-size: 32px;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 400;
+          margin-top: 15px;
+          color: gray;
+        }
+        span {
+          font-size: 25px;
+          margin-top: 15px;
+        }
+        .container {
+          display: flex;
+          align-items: end;
+          height: 60px;
+        }
+        .iconsContainer {
+          margin: 25px 0;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          svg {
+            font-size: 32px;
+            cursor: pointer;
+            color: $black;
+            transition: color $transition,transform $transition;
+            &:hover {
+              color: $yellow;
+              transform: scale(1.1) rotate(360deg);
+            }
+          }
+        }
+
+
+      }
+      .formBlock {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .inputWrapper {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 15px;
+          border: 1px solid $black;
+          border-radius: 5px;
+          overflow: hidden;
+          input {
+            padding: 10px;
+            width: 100%;
+            outline: 0;
+            border: 0;
+            font-family: $main-font;
+            font-size: 16px;
+          }
+        }
+        textarea {
+          padding: 10px;
+          outline: 0;
+          border: 1px solid $black;
+          border-radius: 8px;
+          font-family: $main-font;
+          font-size: 16px;
+          width: 100%;
+          min-height: 100px;
+          resize: none;
+        }
+        .container {
+          display: flex;
+          align-items: end;
+          justify-content: center;
+          height: 60px;
+          button {
+            border: 0;
+            outline: 0;
+            font-family: $main-font;
+          }
+        }
+
+
+      }
+
+
+    }
+  }
+}

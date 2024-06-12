@@ -21,7 +21,7 @@
       },
       {
         "id": "b2aSd",
-        "title": "double burger",
+        "title": "double beef burger",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-1-copyright-480x480.png"
       }
     ],
@@ -32,7 +32,29 @@
     "id": "32Bs3",
     "name": "gourmet pizzas",
     "type": "pizzas",
-    "products": [],
+    "products": [
+      {
+        "id": "97saQ",
+        "title": "buffalo pizza",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-17-copyright-1024x1024.png"
+      },
+      {
+        "id": "32sGQ",
+        "title": "marinara pizza",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-16-copyright-1024x1024.png"
+      },
+      {
+        "id": "85s4k",
+        "title": "margherita pizza",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-18-copyright-1024x1024.png"
+      },
+      {
+        "id": "7sAa0",
+        "title": "fish pizza",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-15-copyright-1024x1024.png"
+      }
+
+    ],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-17-copyright-480x480.png",
     "description": "Delight in our gourmet pizzas, where traditional techniques meet contemporary flair, offering a symphony of taste with every bite."
   },
@@ -40,7 +62,29 @@
     "id": "34sT3",
     "name": "gourmet hotdogs",
     "type": "hotdogs",
-    "products": [],
+    "products": [
+      {
+        "id": "65s2g",
+        "title": "classic hot dog",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-19-copyright-480x480.png"
+      },
+      {
+        "id": "63dBs",
+        "title": "mexican hot dog",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-20-copyright-480x480.png"
+      },
+      {
+        "id": "867Db",
+        "title": "special hot dog",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-21-copyright-480x480.png"
+      },
+      {
+        "id": "321Jh",
+        "title": "chef hot dog",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-22-copyright-480x480.png"
+      }
+
+    ],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-21-copyright-480x480.png",
     "description": "Experience hotdogs like never before with our gourmet selection, featuring artisanal sausages and an array of unique, flavorful toppings."
   },
@@ -48,24 +92,88 @@
     "id": "2CYs1",
     "name": "gourmet dishes",
     "type": "dishes",
-    "products": [],
+    "products": [
+      {
+        "id":"231sa",
+        "title": "shrimps salad",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-8-copyright-480x480.png"
+      },
+      {
+        "id":"321dA",
+        "title": "chicken & vegetables",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-10-copyright-480x480.png"
+      },
+      {
+        "id":"54sSB",
+        "title": "spicy fish",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-11-copyright-480x480.png"
+      },
+      {
+        "id":"23Afs",
+        "title": "beef & vegetables",
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-9-copyright-480x480.png"
+      }
+
+    ],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-9-copyright-480x480.png",
     "description": "Indulge in our gourmet dishes, where culinary artistry meets the finest ingredients, creating unforgettable dining moments."
   },
   {
     "id": "OfdR3",
-    "name": "gourmet coffees",
-    "type": "coffee",
-    "products": [],
-    "image": "https://res.cloudinary.com/de5w8iqms/image/upload/v1705237832/frontend-api/products/4bbe2360-b2de-11ee-b7ae-afbbfd36f49e.png",
-    "description": "Enjoy our gourmet coffees, crafted with handpicked beans and roasted to perfection, delivering a rich and aromatic coffee experience."
+    "name": "gourmet steaks",
+    "type": "steaks",
+    "products": [
+      {
+        "id": "321ad",
+        "title" : "porterhouse steak",
+        "image" : "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-7-copyright-480x480.png"
+      },
+      {
+        "id": "fg2ad",
+        "title" : "filet mignon steak",
+        "image" : "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-6-copyright-480x480.png"
+      },
+      {
+        "id": "uf2ad",
+        "title" : "tomahawk steak",
+        "image" : "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-5-copyright-480x480.png"
+      }
+
+    ],
+    "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-5-copyright-480x480.png",
+    "description": "Enjoy our gourmet steaks, made from fresh meat and cooked to perfection, delivering a rich and aromatic meat flavour."
   },
   {
     "id": "tRfD3",
     "name": "gourmet snacks",
     "type": "snacks",
-    "products": [],
-    "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast7.png",
+    "products": [
+      {
+        "id": "tRfD3",
+        "title": "egg & cheese snack",
+        "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast8.png"
+      },
+      {
+        "id": "ts4f2",
+        "title": "egg & sausage snack",
+        "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast6.png"
+      },
+      {
+        "id": "tF21B",
+        "title": "chicken balls & cheese snack",
+        "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast5.png"
+      },
+      {
+        "id": "ts51C",
+        "title": "breakfast muffin",
+        "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast3.png"
+      }
+
+
+
+    ],
+    "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast3.png",
     "description": "Treat yourself to our gourmet snacks, a delightful assortment of premium bites that perfectly complement any meal or occasion."
   }
+
 ]

@@ -7,24 +7,22 @@ import {Navigation, Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import {useContext, useEffect, useState} from "react";
+import {DataContext} from "../../../Context/DataContext.tsx";
+import { Product } from "../../../types.ts";
 
-import PRODUCTS_DATA from "/public/data/ProductsData/productsData.json";
-import {useEffect, useState} from "react";
 
-interface Product {
-    id: string;
-    image: string;
-    name: string;
-    description: string;
-    type: string;
-    products: { id: string, image: string, title: string }[];
-}
 
-const products: Product[] = PRODUCTS_DATA;
+
 
 export const DetailsPage = () => {
+
+    const {
+        products
+    } = useContext(DataContext);
     const [selectedCategory, setSelectedCategory] = useState<Product | null>(null);
-    const { category } = useParams<{ category: string }>();
+
+    const {category} = useParams<{ category: string }>();
 
     useEffect(() => {
         if (category) {
@@ -79,7 +77,6 @@ export const DetailsPage = () => {
                                             </div>
                                         </div>
                                     </SwiperSlide>
-
                                 )
                             })}
                         </Swiper>
