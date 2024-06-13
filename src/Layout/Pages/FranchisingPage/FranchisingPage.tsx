@@ -91,19 +91,49 @@ export const FranchisingPage = () => {
                 <section className={styles.joinSection}>
                     <div className={styles.joinContent}>
                         <img className={`${styles.decoration} ${styles.sauce}`}
-                            src="https://stackshack.co.uk/wp-content/uploads/2023/03/SecretSauce.gif"
-                            alt="Decoration"/>
+                             src="https://stackshack.co.uk/wp-content/uploads/2023/03/SecretSauce.gif"
+                             alt="Decoration"/>
                         <img className={`${styles.decoration} ${styles.wings}`}
-                            src="https://stackshack.co.uk/wp-content/uploads/2023/03/Wings.gif"
+                             src="https://stackshack.co.uk/wp-content/uploads/2023/03/Wings.gif"
                              alt="Decoration"/>
 
                         <h1>INTERESTED IN JOINING OUR FAMILY?</h1>
                         <p>If you're keen to be a part of our family operation with a successful franchising system,
                             complete the enquiry form, and we'll be in touch.</p>
                         <div className={styles.formBox}>
-
+                            <div className={styles.formRow}>
+                                <div className={styles.formColumn}>
+                                    <input type="text" placeholder={"first name*"} required/>
+                                    <input type="email" placeholder={"email*"} required/>
+                                    <input type="text" placeholder={"address line 1*"} required/>
+                                    <input type="text" placeholder={"city*"} required/>
+                                    <input type="text" placeholder={"post code*"} required/>
+                                </div>
+                                <div className={styles.formColumn}>
+                                    <input type="text" placeholder={"last name*"} required/>
+                                    <input type="tel" placeholder={"telephone*"} required/>
+                                    <input type="text" placeholder={"address line 2"}/>
+                                    <input type="text" placeholder={"county*"} required/>
+                                    <input type="text" placeholder={"country*"} required/>
+                                </div>
+                            </div>
+                            <div className={styles.formRow}>
+                                <div className={`${styles.formColumn} ${styles.wideColumn}`}>
+                                    <input type="text"
+                                           placeholder={"What drew you to a GOURMET franchise opportunity?*"} required/>
+                                    <input type="text" placeholder={"How did you come across our company?*"} required/>
+                                    <input type="text" placeholder={"address line 1*"} required/>
+                                    <input type="text"
+                                           placeholder={"How many stores do you plan to open, and in which locations?*"}
+                                           required/>
+                                    <input type="text" placeholder={"What is your current occupation?*"} required/>
+                                </div>
+                            </div>
+                            <div className={styles.container}>
+                                <button className={`${styles.button} ${styles.yellowToBlackBtn}`}>Submit</button>
+                            </div>
                         </div>
-                            <div className={styles.wideText}>“Best Food <p>I have ever had”</p></div>
+                        <div className={styles.wideText}>“Best Food <p>I have ever had”</p></div>
                     </div>
                 </section>
             </main>

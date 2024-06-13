@@ -18,6 +18,14 @@
       background-color: white;
     }
   }
+  &.yellowToBlackBtn {
+    background: $yellow;
+    &:hover {
+      margin-bottom: 8px;
+      background-color: $black;
+      color: $yellow;
+    }
+  }
   &.whiteBtn {
     background: white;
     &:hover {
