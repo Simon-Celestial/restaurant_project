@@ -14,13 +14,13 @@ export const Header = () => {
         <header className={styles.headerWrapper}>
             <div className={styles.headerContent}>
                 <div className={styles.container}>
-                    <a href={"/"} className={`${styles.button} ${styles.yellowBtn}`}>order now</a>
+                    <Link to={"/"} className={`${styles.button} ${styles.yellowBtn}`}>order now</Link>
                 </div>
                 <div className={styles.container}>
-                    <a href={"/"}>
+                    <Link to={"/"}>
                         <img src="/images/logo.png"
                              alt="Gourmet logo"/>
-                    </a>
+                    </Link>
                 </div>
                 <div className={styles.container}>
                     <div className={styles.menuBtn} onClick={handleMenuOpen}>
@@ -38,9 +38,9 @@ export const Header = () => {
                             <a href="/" className={styles.menuItem}>
                                 home
                             </a>
-                            <a href="/" className={styles.menuItem}>
+                            <Link to={"/story"} className={styles.menuItem}>
                                 story
-                            </a>
+                            </Link>
                             <a href="/" className={styles.menuItem}>
                                 order online
                             </a>
@@ -50,9 +50,9 @@ export const Header = () => {
                             <Link to={"/careers"} className={styles.menuItem}>
                                 careers
                             </Link>
-                            <a href="/" className={styles.menuItem}>
-                                franchise
-                            </a>
+                            <Link to={"/franchising"} className={styles.menuItem}>
+                                franchising
+                            </Link>
                             <Link to={"/contact"} className={styles.menuItem}>
                                 contact
                             </Link>

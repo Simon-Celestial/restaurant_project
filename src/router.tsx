@@ -5,6 +5,8 @@ import {PageNotFound} from "./Layout/Pages/PageNotFound/PageNotFound.tsx";
 import {DetailsPage} from "./Layout/Pages/DetailsPage/DetailsPage.tsx";
 import {ContactPage} from "./Layout/Pages/ContactPage/ContactPage.tsx";
 import {CareersPage} from "./Layout/Pages/CareersPage/CareersPage.tsx";
+import {StoryPage} from "./Layout/Pages/StoryPage/StoryPage.tsx";
+import {FranchisingPage} from "./Layout/Pages/FranchisingPage/FranchisingPage.tsx";
 
 const router = () => createBrowserRouter([
     {
@@ -36,6 +38,14 @@ const router = () => createBrowserRouter([
                 path: 'careers',
                 element: <CareersPage/>,
 
+            },
+            {
+                path: 'story',
+                element: <StoryPage/>,
+            },
+            {
+                path: 'franchising',
+                element: <FranchisingPage/>,
             }
 
         ],

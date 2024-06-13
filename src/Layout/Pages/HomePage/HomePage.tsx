@@ -31,7 +31,7 @@ export const HomePage = () => {
                     DoubleSection
                     reversed={false}
                     image={"https://themes.framework-y.com/gourmet/wp-content/uploads/2017/05/square-8.jpg"}
-                    link={""}
+                    link={"/menu"}
                     title={"the menu"}
                     btn={"check it now"}
                 />
@@ -92,7 +92,7 @@ export const HomePage = () => {
                     DoubleSection
                     reversed={true}
                     image={"https://m.foolcdn.com/media/dubs/images/Franchise_--_GettyImages-682049968.width-880.jpg"}
-                    link={""}
+                    link={"/franchising"}
                     title={"franchising"}
                     btn={"franchising"}
                 />

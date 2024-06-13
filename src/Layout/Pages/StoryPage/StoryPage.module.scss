@@ -1,0 +1,70 @@
+@import "../../../CommonStyles/CommonStyles.modules";
+@import "../../../Variables/Variables.module";
+@import "../../../Animations/Animations.module";
+
+.storyMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .storySection {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 165px 15px 75px 15px;
+    align-items: center;
+    background-color: $cream;
+    .storyContent {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1170px;
+      align-items: center;
+      color: $black;
+      h1 {
+        font-size: 125px;
+        text-align: center;
+      }
+      p {
+        font-size: 30px;
+        text-align: center;
+        max-width: 600px;
+        margin-bottom: 35px;
+        &.wideText {
+          max-width: unset;
+          margin-top: 25px;
+        }
+      }
+      h5 {
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .imageBlock {
+        width: 100%;
+        img {
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .container {
+        display: flex;
+        align-items: end;
+        height: 65px;
+      }
+      .wideImages {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 50%;
+          object-position: center;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
