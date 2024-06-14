@@ -7,6 +7,7 @@ import {ContactPage} from "./Layout/Pages/ContactPage/ContactPage.tsx";
 import {CareersPage} from "./Layout/Pages/CareersPage/CareersPage.tsx";
 import {StoryPage} from "./Layout/Pages/StoryPage/StoryPage.tsx";
 import {FranchisingPage} from "./Layout/Pages/FranchisingPage/FranchisingPage.tsx";
+import {MenuPage} from "./Layout/Pages/MenuPage/MenuPage.tsx";
 
 const router = () => createBrowserRouter([
     {
@@ -46,6 +47,10 @@ const router = () => createBrowserRouter([
             {
                 path: 'franchising',
                 element: <FranchisingPage/>,
+            },
+            {
+                path: 'menu',
+                element: <MenuPage/>,
             }
 
         ],

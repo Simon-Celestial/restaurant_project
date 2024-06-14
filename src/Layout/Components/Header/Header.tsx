@@ -44,9 +44,9 @@ export const Header = () => {
                             <a href="/" className={styles.menuItem}>
                                 order online
                             </a>
-                            <a href="/" className={styles.menuItem}>
+                            <Link to={"/menu"} className={styles.menuItem}>
                                 menu
-                            </a>
+                            </Link>
                             <Link to={"/careers"} className={styles.menuItem}>
                                 careers
                             </Link>

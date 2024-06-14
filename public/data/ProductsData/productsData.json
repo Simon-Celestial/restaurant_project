@@ -7,6 +7,12 @@
       {
         "id": "asd2dS",
         "title": "chicken burger",
+        "rating": 4,
+        "regularPrice" : 32,
+        "salePrice" : 25,
+        "quantity": 35,
+        "description": "A delicious chicken burger made with fresh ingredients.",
+        "ingredients": ["chicken patty", "lettuce", "tomato", "mayo", "bun"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-3-copyright-480x480.png"
       },
       {
