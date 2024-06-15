@@ -8,6 +8,7 @@ import {CareersPage} from "./Layout/Pages/CareersPage/CareersPage.tsx";
 import {StoryPage} from "./Layout/Pages/StoryPage/StoryPage.tsx";
 import {FranchisingPage} from "./Layout/Pages/FranchisingPage/FranchisingPage.tsx";
 import {MenuPage} from "./Layout/Pages/MenuPage/MenuPage.tsx";
+import {SingleProductPage} from "./Layout/Pages/SingleProductPage/SingleProductPage.tsx";
 
 const router = () => createBrowserRouter([
     {
@@ -51,8 +52,11 @@ const router = () => createBrowserRouter([
             {
                 path: 'menu',
                 element: <MenuPage/>,
+            },
+            {
+                path: 'single-product/:id',
+                element: <SingleProductPage />,
             }
-
         ],
     },
 

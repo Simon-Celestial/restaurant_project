@@ -12,6 +12,7 @@ import FormControl from '@mui/material/FormControl';
 import {Box, Rating, Slider} from "@mui/material";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import {Link} from "react-router-dom";
 
 
 // PAGINATION
@@ -24,7 +25,7 @@ function valuetext(value: number) {
 export const MenuPage = () => {
 
     const {
-        products
+        allProducts
     } = useContext(DataContext);
 
     const [searchTerm, setSearchTerm] = useState<string>("");
@@ -61,11 +62,6 @@ export const MenuPage = () => {
     const handleSearchTerm = useCallback((e: ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(e.target.value);
     }, [setSearchTerm]);
-
-
-    const allProducts = useMemo(() => {
-        return products.flatMap(category => category.products)
-    }, [products]);
 
     const allCategories = useMemo(() => Array.from(new Set(allProducts?.map(it => it.category))), [allProducts]);
 
@@ -166,7 +162,6 @@ export const MenuPage = () => {
                                 :
                                 currentProducts?.map((product: ProductDetail) => {
                                     return (
-
                                         <div key={product?.id} className={styles.productCard}>
                                             <div className={styles.productImage}>
                                                 <div className={styles.wishItem}>
@@ -193,7 +188,7 @@ export const MenuPage = () => {
                                                 }
                                             </div>
                                             <div className={styles.productTitle}>
-                                                <h5>{product?.title}</h5>
+                                                <Link to={`/single-product/${product?.id}`}>{product?.title}</Link>
                                                 <p>{product?.description}</p>
                                                 <Box
                                                     sx={{
