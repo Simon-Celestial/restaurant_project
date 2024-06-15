@@ -4,7 +4,7 @@ export interface Product {
     name: string;
     description: string;
     type: string;
-    products: { id: string, image: string, title: string }[];
+    products: ProductDetail[] ;
 }
 
 export interface JobDetail {

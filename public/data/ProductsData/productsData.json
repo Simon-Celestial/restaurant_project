@@ -8,9 +8,9 @@
         "id": "asd2dS",
         "title": "chicken burger",
         "rating": 4,
-        "regularPrice" : 32,
-        "salePrice" : 25,
-        "quantity": 35,
+        "regularPrice": 32,
+        "salePrice": 25,
+        "quantity": 0,
         "description": "A delicious chicken burger made with fresh ingredients.",
         "ingredients": ["chicken patty", "lettuce", "tomato", "mayo", "bun"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-3-copyright-480x480.png"
@@ -18,16 +18,34 @@
       {
         "id": "3sadB",
         "title": "black burger",
+        "rating": 5,
+        "regularPrice": 38,
+        "salePrice": 30,
+        "quantity": 20,
+        "description": "A unique burger with a black bun and savory fillings.",
+        "ingredients": ["beef patty", "black bun", "cheddar cheese", "lettuce", "onion", "special sauce"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-4-copyright-480x480.png"
       },
       {
         "id": "d43sDs",
         "title": "fish burger",
+        "rating": 4,
+        "regularPrice": null,
+        "salePrice": 28,
+        "quantity": 25,
+        "description": "A crispy fish burger with tartar sauce and fresh vegetables.",
+        "ingredients": ["fish fillet", "lettuce", "tomato", "tartar sauce", "bun"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-2-copyright-480x480.png"
       },
       {
         "id": "b2aSd",
         "title": "double beef burger",
+        "rating": 5,
+        "regularPrice": null,
+        "salePrice": 40,
+        "quantity": 15,
+        "description": "A hearty double beef burger with all the classic toppings.",
+        "ingredients": ["double beef patties", "lettuce", "tomato", "pickles", "cheddar cheese", "mayo", "bun"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-1-copyright-480x480.png"
       }
     ],
@@ -42,24 +60,47 @@
       {
         "id": "97saQ",
         "title": "buffalo pizza",
+        "rating": 4.5,
+        "regularPrice": 28,
+        "salePrice": 22,
+        "quantity": 40,
+        "description": "A spicy buffalo pizza topped with chicken and mozzarella cheese.",
+        "ingredients": ["buffalo sauce", "chicken", "mozzarella cheese", "blue cheese", "dough"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-17-copyright-1024x1024.png"
       },
       {
         "id": "32sGQ",
         "title": "marinara pizza",
+        "rating": 4,
+        "regularPrice": 25,
+        "salePrice": 20,
+        "quantity": 30,
+        "description": "A classic marinara pizza with fresh tomato sauce and garlic.",
+        "ingredients": ["tomato sauce", "garlic", "oregano", "basil", "dough"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-16-copyright-1024x1024.png"
       },
       {
         "id": "85s4k",
         "title": "margherita pizza",
+        "rating": 4.5,
+        "regularPrice": null,
+        "salePrice": 21,
+        "quantity": 50,
+        "description": "A simple yet delicious margherita pizza with fresh basil.",
+        "ingredients": ["tomato sauce", "mozzarella cheese", "basil", "olive oil", "dough"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-18-copyright-1024x1024.png"
       },
       {
         "id": "7sAa0",
         "title": "fish pizza",
+        "rating": 4,
+        "regularPrice": 30,
+        "salePrice": 25,
+        "quantity": 20,
+        "description": "A unique pizza topped with fresh fish and herbs.",
+        "ingredients": ["fish fillet", "tomato sauce", "mozzarella cheese", "herbs", "dough"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-15-copyright-1024x1024.png"
       }
-
     ],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-17-copyright-480x480.png",
     "description": "Delight in our gourmet pizzas, where traditional techniques meet contemporary flair, offering a symphony of taste with every bite."
@@ -72,24 +113,47 @@
       {
         "id": "65s2g",
         "title": "classic hot dog",
+        "rating": 4,
+        "regularPrice": null,
+        "salePrice": 15,
+        "quantity": 50,
+        "description": "A traditional hot dog with all the classic toppings.",
+        "ingredients": ["sausage", "bun", "ketchup", "mustard", "onions", "relish"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-19-copyright-480x480.png"
       },
       {
         "id": "63dBs",
         "title": "mexican hot dog",
+        "rating": 4.5,
+        "regularPrice": 20,
+        "salePrice": 17,
+        "quantity": 35,
+        "description": "A spicy Mexican hot dog with jalapenos and salsa.",
+        "ingredients": ["sausage", "bun", "jalapenos", "salsa", "guacamole", "cheese"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-20-copyright-480x480.png"
       },
       {
         "id": "867Db",
         "title": "special hot dog",
+        "rating": 4.5,
+        "regularPrice": 22,
+        "salePrice": 18,
+        "quantity": 25,
+        "description": "A gourmet hot dog with unique toppings for a special taste.",
+        "ingredients": ["sausage", "bun", "special sauce", "crispy onions", "pickles"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-21-copyright-480x480.png"
       },
       {
         "id": "321Jh",
         "title": "chef hot dog",
+        "rating": 5,
+        "regularPrice": null,
+        "salePrice": 20,
+        "quantity": 20,
+        "description": "A premium hot dog created by our chef with exclusive ingredients.",
+        "ingredients": ["sausage", "bun", "truffle mayo", "arugula", "parmesan cheese"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-22-copyright-480x480.png"
       }
-
     ],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-21-copyright-480x480.png",
     "description": "Experience hotdogs like never before with our gourmet selection, featuring artisanal sausages and an array of unique, flavorful toppings."
@@ -102,24 +166,47 @@
       {
         "id":"231sa",
         "title": "shrimps salad",
+        "rating": 4.5,
+        "regularPrice": null,
+        "salePrice": 20,
+        "quantity": 30,
+        "description": "A fresh shrimp salad with a mix of greens and a zesty dressing.",
+        "ingredients": ["shrimps", "mixed greens", "cherry tomatoes", "cucumber", "lemon vinaigrette"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-8-copyright-480x480.png"
       },
       {
         "id":"321dA",
         "title": "chicken & vegetables",
+        "rating": 4.5,
+        "regularPrice": 28,
+        "salePrice": 22,
+        "quantity": 25,
+        "description": "Grilled chicken served with a variety of fresh vegetables.",
+        "ingredients": ["chicken breast", "zucchini", "bell peppers", "carrots", "olive oil"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-10-copyright-480x480.png"
       },
       {
         "id":"54sSB",
         "title": "spicy fish",
+        "rating": 4,
+        "regularPrice": null,
+        "salePrice": 25,
+        "quantity": 20,
+        "description": "A spicy fish dish with a blend of aromatic spices.",
+        "ingredients": ["fish fillet", "chili peppers", "garlic", "cilantro", "lime"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-11-copyright-480x480.png"
       },
       {
         "id":"23Afs",
         "title": "beef & vegetables",
+        "rating": 4.5,
+        "regularPrice": 32,
+        "salePrice": 28,
+        "quantity": 15,
+        "description": "Succulent beef served with a side of seasonal vegetables.",
+        "ingredients": ["beef steak", "broccoli", "potatoes", "carrots", "herb butter"],
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-9-copyright-480x480.png"
       }
-
     ],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-9-copyright-480x480.png",
     "description": "Indulge in our gourmet dishes, where culinary artistry meets the finest ingredients, creating unforgettable dining moments."
@@ -132,19 +219,36 @@
       {
         "id": "321ad",
         "title" : "porterhouse steak",
-        "image" : "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-7-copyright-480x480.png"
+        "rating": 5,
+        "regularPrice": 50,
+        "salePrice": 45,
+        "quantity": 10,
+        "description": "A premium porterhouse steak cooked to perfection.",
+        "ingredients": ["porterhouse steak", "salt", "pepper", "butter", "garlic"],
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-7-copyright-480x480.png"
       },
       {
         "id": "fg2ad",
         "title" : "filet mignon steak",
-        "image" : "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-6-copyright-480x480.png"
+        "rating": 5,
+        "regularPrice": null,
+        "salePrice": 50,
+        "quantity": 12,
+        "description": "A tender filet mignon steak with a rich flavor.",
+        "ingredients": ["filet mignon", "salt", "pepper", "butter", "thyme"],
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-6-copyright-480x480.png"
       },
       {
         "id": "uf2ad",
         "title" : "tomahawk steak",
-        "image" : "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-5-copyright-480x480.png"
+        "rating": 5,
+        "regularPrice": null,
+        "salePrice": 55,
+        "quantity": 8,
+        "description": "A massive tomahawk steak for the ultimate meat lover.",
+        "ingredients": ["tomahawk steak", "salt", "pepper", "rosemary", "olive oil"],
+        "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-5-copyright-480x480.png"
       }
-
     ],
     "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-5-copyright-480x480.png",
     "description": "Enjoy our gourmet steaks, made from fresh meat and cooked to perfection, delivering a rich and aromatic meat flavour."
@@ -157,29 +261,49 @@
       {
         "id": "tRfD3",
         "title": "egg & cheese snack",
+        "rating": 4,
+        "regularPrice": null,
+        "salePrice": 12,
+        "quantity": 30,
+        "description": "A tasty snack with egg and melted cheese.",
+        "ingredients": ["egg", "cheddar cheese", "bread", "butter"],
         "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast8.png"
       },
       {
         "id": "ts4f2",
         "title": "egg & sausage snack",
+        "rating": 4.5,
+        "regularPrice": null,
+        "salePrice": 15,
+        "quantity": 25,
+        "description": "A delicious combination of egg and sausage in a snack.",
+        "ingredients": ["egg", "sausage", "bread", "cheese"],
         "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast6.png"
       },
       {
         "id": "tF21B",
-        "title": "chicken balls & cheese snack",
+        "title": "chicken balls snack",
+        "rating": 4.5,
+        "regularPrice": 20,
+        "salePrice": 17,
+        "quantity": 20,
+        "description": "Crispy chicken balls with a cheesy center.",
+        "ingredients": ["chicken", "cheese", "breadcrumbs", "spices"],
         "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast5.png"
       },
       {
         "id": "ts51C",
         "title": "breakfast muffin",
+        "rating": 4.5,
+        "regularPrice": 12,
+        "salePrice": 10,
+        "quantity": 35,
+        "description": "A wholesome breakfast muffin with a variety of fillings.",
+        "ingredients": ["egg", "cheese", "ham", "muffin"],
         "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast3.png"
       }
-
-
-
     ],
     "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast3.png",
     "description": "Treat yourself to our gourmet snacks, a delightful assortment of premium bites that perfectly complement any meal or occasion."
   }
-
 ]
