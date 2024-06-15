@@ -51,4 +51,12 @@
       color: $black;
     }
   }
+  &.yellowToOrangeBtn {
+    background: $yellow;
+    &:hover {
+      margin-bottom: 8px;
+      background-color: orange;
+    }
+  }
+
 }

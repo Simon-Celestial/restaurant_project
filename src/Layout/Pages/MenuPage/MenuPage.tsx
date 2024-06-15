@@ -2,14 +2,24 @@ import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import styles from "./MenuPage.module.scss";
 import {DataContext} from "../../../Context/DataContext.tsx";
-import React, {useCallback, useContext, useMemo, useState, ChangeEvent} from "react";
+import React, {useCallback, useContext, useMemo, useState, ChangeEvent, useEffect} from "react";
 import {ProductDetail} from "../../../types.ts";
-import {MagnifyingGlass} from "@phosphor-icons/react";
+import {Heart, MagnifyingGlass} from "@phosphor-icons/react";
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import {Box, Rating, Slider} from "@mui/material";
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
+
+// PAGINATION
+const itemsPerPage = 6;
+
+function valuetext(value: number) {
+    return `${value}`;
+}
 
 export const MenuPage = () => {
 
@@ -19,6 +29,24 @@ export const MenuPage = () => {
 
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [stockValue, setStockValue] = React.useState('both');
+    const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
+    const [priceValue, setPriceValue] = React.useState<number[]>([0, 100]);
+    const [currentPage, setCurrentPage] = useState(1);
+
+
+
+    const handlePriceChange = useCallback((_event: Event, newValue: number | number[]) => {
+        setPriceValue(newValue as number[]);
+    }, [setPriceValue]);
+
+    const handleCategorySelection = useCallback((category: string) => {
+        setSelectedCategory(prevState =>
+            prevState.includes(category)
+                ? prevState.filter(it => it !== category)
+                : [...prevState, category]
+        );
+    }, [selectedCategory, setSelectedCategory]);
+
 
     const handleStockChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         const selectedValue = event.target.value;
@@ -38,6 +66,8 @@ export const MenuPage = () => {
     const allProducts = useMemo(() => {
         return products.flatMap(category => category.products)
     }, [products]);
+
+    const allCategories = useMemo(() => Array.from(new Set(allProducts?.map(it => it.category))), [allProducts]);
 
     const searchFilteredData = useMemo(() => {
         const normalizedSearchTerm = searchTerm.toLowerCase().trim();
@@ -60,6 +90,39 @@ export const MenuPage = () => {
         }
     }, [searchFilteredData, stockValue]);
 
+    const categoryFilterData = useMemo(() => {
+        if (selectedCategory.length === 0) {
+            return stockFilteredData;
+        } else {
+            return stockFilteredData.filter(product =>
+                selectedCategory.some(category => product.category.toLowerCase() === category.toLowerCase())
+            );
+        }
+    }, [stockFilteredData, selectedCategory]);
+
+    const priceFilteredData = useMemo(() => {
+        return categoryFilterData.filter(product => product.salePrice >= priceValue[0] && product.salePrice <= priceValue[1])
+
+    }, [categoryFilterData, priceValue])
+
+    // PAGINATION
+    const startIndex = useMemo(() => (currentPage - 1) * itemsPerPage,
+        [currentPage]);
+    const endIndex = useMemo(() => startIndex + itemsPerPage, [startIndex]);
+
+    const handlePageChange = useCallback((_event: React.ChangeEvent<unknown>, page: number) => {
+        setCurrentPage(page);
+    }, [setCurrentPage]);
+
+    const currentProducts = useMemo(() => {
+        return priceFilteredData?.slice(startIndex, endIndex);
+    }, [priceFilteredData, startIndex, endIndex]);
+
+    useEffect(() => {
+        if (priceFilteredData && priceFilteredData.length > 0 && endIndex > priceFilteredData.length - 1) {
+            setCurrentPage(Math.ceil(priceFilteredData?.length / itemsPerPage));
+        }
+    }, [endIndex, priceFilteredData, setCurrentPage, itemsPerPage]);
 
     return (
         <>
@@ -79,22 +142,36 @@ export const MenuPage = () => {
                                 Download Menu
                             </a>
                         </div>
-
                     </div>
                 </section>
                 <section className={styles.productsSection}>
                     <div className={styles.productsContent}>
                         <div className={styles.productsWrapper}>
-                            {stockFilteredData.length < 1 ?
+                            <div className={styles.paginationWrapper}>
+                                <Stack spacing={1}>
+                                    <Pagination
+                                        count={Math.ceil(priceFilteredData?.length / itemsPerPage)}
+                                        variant="outlined"
+                                        shape="rounded"
+                                        size="large"
+                                        page={currentPage}
+                                        onChange={handlePageChange}
+                                    />
+                                </Stack>
+                            </div>
+                            {currentProducts?.length < 1 ?
                                 <div className={styles.noProducts}>
                                     <h1>No Products Found...</h1>
                                 </div>
                                 :
-                                stockFilteredData?.map((product: ProductDetail) => {
+                                currentProducts?.map((product: ProductDetail) => {
                                     return (
 
                                         <div key={product?.id} className={styles.productCard}>
                                             <div className={styles.productImage}>
+                                                <div className={styles.wishItem}>
+                                                    <Heart />
+                                                </div>
                                                 <img src={product?.image} alt="Product"
                                                      style={{
                                                          filter: product?.quantity < 1 ? "blur(3px) grayscale(1)" : "none"
@@ -118,6 +195,18 @@ export const MenuPage = () => {
                                             <div className={styles.productTitle}>
                                                 <h5>{product?.title}</h5>
                                                 <p>{product?.description}</p>
+                                                <Box
+                                                    sx={{
+                                                        '& > legend': { mt: 2 },
+                                                    }}
+                                                >
+                                                    <Rating name="read-only" value={product?.rating} readOnly />
+                                                </Box>
+                                                <div className={styles.container}>
+                                                    <div className={`${styles.button} ${styles.yellowToOrangeBtn}`}>Add
+                                                        to cart
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     )
@@ -132,6 +221,24 @@ export const MenuPage = () => {
                                         value={searchTerm}
                                         onChange={handleSearchTerm}
                                         type="text"/>
+                                </div>
+                            </div>
+                            <div className={styles.optionsContainer}>
+                                <p>Price</p>
+                                <div className={styles.priceContainer}>
+                                    <Box sx={{padding: '0 10px'}}>
+                                        <Slider
+                                            sx={{color: "orange"}}
+                                            getAriaLabel={() => 'Temperature range'}
+                                            value={priceValue}
+                                            onChange={handlePriceChange}
+                                            valueLabelDisplay="auto"
+                                            getAriaValueText={valuetext}
+                                        />
+                                    </Box>
+                                    <div className={styles.priceValues}>
+                                        Price: {priceValue[0]?.toFixed(2)} $ - {priceValue[1]?.toFixed(2)} $
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.optionsContainer}>
@@ -157,7 +264,21 @@ export const MenuPage = () => {
                                     </FormControl>
                                 </div>
                             </div>
-
+                            <div className={styles.optionsContainer}>
+                                <p>Categories</p>
+                                <div className={styles.categories}>
+                                    {allCategories?.map((category, i) => {
+                                        return (
+                                            <li
+                                                key={i} onClick={() => handleCategorySelection(category)}
+                                                style={{
+                                                    color: selectedCategory.includes(category) ? "orange" : "",
+                                                }}>
+                                                {category}</li>
+                                        )
+                                    })}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -13,6 +13,7 @@
         "quantity": 0,
         "description": "A delicious chicken burger made with fresh ingredients.",
         "ingredients": ["chicken patty", "lettuce", "tomato", "mayo", "bun"],
+        "category": "burger",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-3-copyright-480x480.png"
       },
       {
@@ -24,6 +25,7 @@
         "quantity": 20,
         "description": "A unique burger with a black bun and savory fillings.",
         "ingredients": ["beef patty", "black bun", "cheddar cheese", "lettuce", "onion", "special sauce"],
+        "category": "burger",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-4-copyright-480x480.png"
       },
       {
@@ -35,6 +37,7 @@
         "quantity": 25,
         "description": "A crispy fish burger with tartar sauce and fresh vegetables.",
         "ingredients": ["fish fillet", "lettuce", "tomato", "tartar sauce", "bun"],
+        "category": "burger",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-2-copyright-480x480.png"
       },
       {
@@ -46,6 +49,7 @@
         "quantity": 15,
         "description": "A hearty double beef burger with all the classic toppings.",
         "ingredients": ["double beef patties", "lettuce", "tomato", "pickles", "cheddar cheese", "mayo", "bun"],
+        "category": "burger",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-1-copyright-480x480.png"
       }
     ],
@@ -66,6 +70,7 @@
         "quantity": 40,
         "description": "A spicy buffalo pizza topped with chicken and mozzarella cheese.",
         "ingredients": ["buffalo sauce", "chicken", "mozzarella cheese", "blue cheese", "dough"],
+        "category": "pizza",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-17-copyright-1024x1024.png"
       },
       {
@@ -77,6 +82,7 @@
         "quantity": 30,
         "description": "A classic marinara pizza with fresh tomato sauce and garlic.",
         "ingredients": ["tomato sauce", "garlic", "oregano", "basil", "dough"],
+        "category": "pizza",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-16-copyright-1024x1024.png"
       },
       {
@@ -88,6 +94,7 @@
         "quantity": 50,
         "description": "A simple yet delicious margherita pizza with fresh basil.",
         "ingredients": ["tomato sauce", "mozzarella cheese", "basil", "olive oil", "dough"],
+        "category": "pizza",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-18-copyright-1024x1024.png"
       },
       {
@@ -99,6 +106,7 @@
         "quantity": 20,
         "description": "A unique pizza topped with fresh fish and herbs.",
         "ingredients": ["fish fillet", "tomato sauce", "mozzarella cheese", "herbs", "dough"],
+        "category": "pizza",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-15-copyright-1024x1024.png"
       }
     ],
@@ -119,6 +127,7 @@
         "quantity": 50,
         "description": "A traditional hot dog with all the classic toppings.",
         "ingredients": ["sausage", "bun", "ketchup", "mustard", "onions", "relish"],
+        "category": "hotdog",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-19-copyright-480x480.png"
       },
       {
@@ -130,6 +139,7 @@
         "quantity": 35,
         "description": "A spicy Mexican hot dog with jalapenos and salsa.",
         "ingredients": ["sausage", "bun", "jalapenos", "salsa", "guacamole", "cheese"],
+        "category": "hotdog",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-20-copyright-480x480.png"
       },
       {
@@ -141,6 +151,7 @@
         "quantity": 25,
         "description": "A gourmet hot dog with unique toppings for a special taste.",
         "ingredients": ["sausage", "bun", "special sauce", "crispy onions", "pickles"],
+        "category": "hotdog",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-21-copyright-480x480.png"
       },
       {
@@ -152,6 +163,7 @@
         "quantity": 20,
         "description": "A premium hot dog created by our chef with exclusive ingredients.",
         "ingredients": ["sausage", "bun", "truffle mayo", "arugula", "parmesan cheese"],
+        "category": "hotdog",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-22-copyright-480x480.png"
       }
     ],
@@ -172,6 +184,7 @@
         "quantity": 30,
         "description": "A fresh shrimp salad with a mix of greens and a zesty dressing.",
         "ingredients": ["shrimps", "mixed greens", "cherry tomatoes", "cucumber", "lemon vinaigrette"],
+        "category": "dishes",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-8-copyright-480x480.png"
       },
       {
@@ -183,6 +196,7 @@
         "quantity": 25,
         "description": "Grilled chicken served with a variety of fresh vegetables.",
         "ingredients": ["chicken breast", "zucchini", "bell peppers", "carrots", "olive oil"],
+        "category": "dishes",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-10-copyright-480x480.png"
       },
       {
@@ -194,6 +208,7 @@
         "quantity": 20,
         "description": "A spicy fish dish with a blend of aromatic spices.",
         "ingredients": ["fish fillet", "chili peppers", "garlic", "cilantro", "lime"],
+        "category": "dishes",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-11-copyright-480x480.png"
       },
       {
@@ -205,6 +220,7 @@
         "quantity": 15,
         "description": "Succulent beef served with a side of seasonal vegetables.",
         "ingredients": ["beef steak", "broccoli", "potatoes", "carrots", "herb butter"],
+        "category": "dishes",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2023/02/product-9-copyright-480x480.png"
       }
     ],
@@ -225,6 +241,7 @@
         "quantity": 10,
         "description": "A premium porterhouse steak cooked to perfection.",
         "ingredients": ["porterhouse steak", "salt", "pepper", "butter", "garlic"],
+        "category": "steak",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-7-copyright-480x480.png"
       },
       {
@@ -236,6 +253,7 @@
         "quantity": 12,
         "description": "A tender filet mignon steak with a rich flavor.",
         "ingredients": ["filet mignon", "salt", "pepper", "butter", "thyme"],
+        "category": "steak",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-6-copyright-480x480.png"
       },
       {
@@ -247,6 +265,7 @@
         "quantity": 8,
         "description": "A massive tomahawk steak for the ultimate meat lover.",
         "ingredients": ["tomahawk steak", "salt", "pepper", "rosemary", "olive oil"],
+        "category": "steak",
         "image": "https://easyeat.ancorathemes.com/wp-content/uploads/2020/05/product-5-copyright-480x480.png"
       }
     ],
@@ -267,6 +286,7 @@
         "quantity": 30,
         "description": "A tasty snack with egg and melted cheese.",
         "ingredients": ["egg", "cheddar cheese", "bread", "butter"],
+        "category": "snack",
         "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast8.png"
       },
       {
@@ -278,6 +298,7 @@
         "quantity": 25,
         "description": "A delicious combination of egg and sausage in a snack.",
         "ingredients": ["egg", "sausage", "bread", "cheese"],
+        "category": "snack",
         "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast6.png"
       },
       {
@@ -289,6 +310,7 @@
         "quantity": 20,
         "description": "Crispy chicken balls with a cheesy center.",
         "ingredients": ["chicken", "cheese", "breadcrumbs", "spices"],
+        "category": "snack",
         "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast5.png"
       },
       {
@@ -300,6 +322,7 @@
         "quantity": 35,
         "description": "A wholesome breakfast muffin with a variety of fillings.",
         "ingredients": ["egg", "cheese", "ham", "muffin"],
+        "category": "snack",
         "image": "https://stackshack.co.uk/wp-content/uploads/2023/07/breakfast3.png"
       }
     ],

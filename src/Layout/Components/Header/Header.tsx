@@ -14,7 +14,7 @@ export const Header = () => {
         <header className={styles.headerWrapper}>
             <div className={styles.headerContent}>
                 <div className={styles.container}>
-                    <Link to={"/"} className={`${styles.button} ${styles.yellowBtn}`}>order now</Link>
+                    <Link to={"/menu"} className={`${styles.button} ${styles.yellowBtn}`}>order now</Link>
                 </div>
                 <div className={styles.container}>
                     <Link to={"/"}>

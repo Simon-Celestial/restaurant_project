@@ -16,11 +16,12 @@ export interface ProductDetail {
     id: string;
     image: string;
     title: string;
-    rating: string;
+    rating: number;
     regularPrice: number | null;
     salePrice: number;
     quantity: number ;
-    description: string
+    description: string,
+    "category" : string,
     ingredients: string[]
 }
 
