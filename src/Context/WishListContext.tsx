@@ -41,7 +41,7 @@ export const WishListContextProvider: React.FC<WishListContextProviderProps> = (
                     pauseOnHover: false,
                     draggable: true,
                     progress: undefined,
-                    theme: "colored",
+                    theme: "dark",
                     transition: Bounce,
                 });
                 return [...prev, product];
@@ -52,7 +52,7 @@ export const WishListContextProvider: React.FC<WishListContextProviderProps> = (
                     pauseOnHover: false,
                     draggable: true,
                     progress: undefined,
-                    theme: "colored",
+                    theme: "dark",
                     transition: Bounce,
                 });
                 const updatedWishlist = [...prev];
@@ -63,13 +63,13 @@ export const WishListContextProvider: React.FC<WishListContextProviderProps> = (
     }, []);
 
     const removeFromWishList = useCallback((productId: string) => {
-        toast.info(`Product removed from wishlist`, {
+        toast.success(`Product removed from wishlist`, {
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: false,
             draggable: true,
             progress: undefined,
-            theme: "colored",
+            theme: "dark",
             transition: Bounce
         });
         setWishListItems(prev => prev.filter(item => item.id !== productId));

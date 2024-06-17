@@ -97,7 +97,7 @@ export const DetailsPage = () => {
                         </Swiper>
                     </div>
                     <div className={styles.container}>
-                        <Link to={"/"} className={`${styles.button} ${styles.blackBtn}`}>back to menu</Link>
+                        <Link to={"/menu"} className={`${styles.button} ${styles.blackBtn}`}>open menu</Link>
                     </div>
                 </div>
             </main>

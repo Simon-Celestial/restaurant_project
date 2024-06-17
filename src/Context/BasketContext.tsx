@@ -39,13 +39,13 @@ export const BasketContextProvider: React.FC<BasketContextProviderProps> = ({ ch
             const existingItem = prev.find(item => item.id === product.id);
 
             if (existingItem) {
-                toast.success(`${product.title} added to basket`, {
+                toast.success(`${product.title.toUpperCase()} added to basket`, {
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: false,
                     draggable: true,
                     progress: undefined,
-                    theme: "colored",
+                    theme: "dark",
                     transition: Bounce,
                 });
                 return prev.map(item =>
@@ -58,7 +58,7 @@ export const BasketContextProvider: React.FC<BasketContextProviderProps> = ({ ch
                     pauseOnHover: false,
                     draggable: true,
                     progress: undefined,
-                    theme: "colored",
+                    theme: "dark",
                     transition: Bounce,
                 });
                 return [...prev];
@@ -69,7 +69,7 @@ export const BasketContextProvider: React.FC<BasketContextProviderProps> = ({ ch
                     pauseOnHover: false,
                     draggable: true,
                     progress: undefined,
-                    theme: "colored",
+                    theme: "dark",
                     transition: Bounce,
                 });
                 return [...prev, { ...product, count: 1 }];
@@ -84,7 +84,7 @@ export const BasketContextProvider: React.FC<BasketContextProviderProps> = ({ ch
             pauseOnHover: false,
             draggable: true,
             progress: undefined,
-            theme: "colored",
+            theme: "dark",
             transition: Bounce,
         });
 
@@ -111,7 +111,7 @@ export const BasketContextProvider: React.FC<BasketContextProviderProps> = ({ ch
             pauseOnHover: false,
             draggable: true,
             progress: undefined,
-            theme: "colored",
+            theme: "dark",
             transition: Bounce,
         });
     }, []);

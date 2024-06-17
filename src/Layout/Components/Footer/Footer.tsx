@@ -5,7 +5,7 @@ export const Footer = () => {
         <footer className={styles.footerWrapper}>
             <div className={styles.footerContent}>
                 <div className={styles.textBlock}>
-                    THANKS FOR EATING WITH US
+                    thanks for choosing us
                 </div>
                 <div className={styles.mailBlock}>
                     <div className={styles.mailItem}>

@@ -115,9 +115,9 @@ export const Header = () => {
                             <Link to={"/story"} className={styles.menuItem}>
                                 story
                             </Link>
-                            <a href="/" className={styles.menuItem}>
-                                order online
-                            </a>
+                            <Link to={"/wishlist"} className={styles.menuItem}>
+                                wishlist
+                            </Link>
                             <Link to={"/menu"} className={styles.menuItem}>
                                 menu
                             </Link>

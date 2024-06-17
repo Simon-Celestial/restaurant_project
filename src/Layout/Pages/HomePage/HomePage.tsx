@@ -23,7 +23,7 @@ export const HomePage = () => {
                         <h1>TODAY'S A GOURMET' DAY</h1>
                         <p>Secret family recipes are the stuff of legends and Gourmet dishes is no exception.</p>
                         <div className={styles.container}>
-                            <div className={`${styles.button} ${styles.whiteBtn}`}>order online</div>
+                            <Link to={"/menu"} className={`${styles.button} ${styles.whiteBtn}`}>order online</Link>
                         </div>
                     </div>
                 </section>
@@ -50,9 +50,9 @@ export const HomePage = () => {
                                 perfect for those who appreciate high quality and excellent taste.
                             </p>
                             <div className={styles.container}>
-                                <Link to={"/"} className={`${styles.button} ${styles.blackBtn}`}>
+                                <a href="#newsletter" className={`${styles.button} ${styles.blackBtn}`}>
                                     SIGN UP TO OUR NEWSLETTER
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -96,9 +96,9 @@ export const HomePage = () => {
                     title={"franchising"}
                     btn={"franchising"}
                 />
-                <section className={styles.formSection}>
+                <section className={styles.formSection} id="newsletter">
                     <div className={styles.sectionContent}>
-                        <div className={styles.blockWrapper}>
+                        <div className={styles.blockWrapper} >
                             <img className={`${styles.decoration} ${styles.sauce}`} src="https://stackshack.co.uk/wp-content/uploads/2023/03/SecretSauce.gif" alt="Animated logo"/>
                             <img className={`${styles.decoration} ${styles.hotDog}`} src="https://stackshack.co.uk/wp-content/uploads/2023/03/TopDog.gif" alt="Animated Logo"/>
                             <div className={styles.title}>
