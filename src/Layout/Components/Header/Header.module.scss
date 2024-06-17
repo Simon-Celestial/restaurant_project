@@ -14,45 +14,224 @@
   top: 0;
   z-index: 10;
   border-bottom: 1px solid $yellow;
+  .cartWrapper {
+    position: absolute;
+    left: -370px;
+    top: 111px;
+    width: 100%;
+    max-width: 370px;
+    background: $black;
+    padding: 0 0 15px 15px;
+    transition: left $transition;
+    border-right: 1px solid $yellow;
+    border-bottom: 1px solid $yellow;
+    .productsWrapper {
+      max-height: 317px;
+      height: 100%;
+      overflow-y: auto;
+      padding-right: 10px;
+      min-height: 250px;
+      width: 100%;
+      .emptyCart {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin-top: 72px;
+        img {
+          max-width: 70px;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+          filter: invert(1);
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $yellow;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: orangered;
+        border-radius: 10px;
+      }
+
+
+      .productCard {
+        display: flex;
+        width: 100%;
+        gap: 15px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid yellow;
+        padding: 15px 0;
+        &:last-child {
+          border-bottom: none;
+        }
+        .productTitle {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 10px;
+          max-width: 200px;
+          .container {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            font-size: 20px;
+            color: white;
+            align-items: center;
+            .counter {
+              display: flex;
+              align-items: center;
+              height: 30px;
+              max-width: 99px;
+              width: 100%;
+              font-size: 20px;
+              justify-content: space-between;
+              border: 1px solid $yellow;
+              border-radius: 3px;
+              span {
+                cursor: pointer;
+                max-width: 33px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $yellow;
+                &:nth-child(2) {
+                  cursor: default;
+                }
+              }
+            }
+          }
+          .button {
+            background: orangered;
+            color: white;
+            &:hover {
+              background: #f57347;
+            }
+          }
+          h2 {
+            color: $yellow;
+            font-weight: 400;
+            font-size: 25px;
+          }
+        }
+        .productImage{
+          max-width: 125px;
+          height: 125px;
+          width: 100%;
+          border: 1px solid $yellow;
+          img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+          }
+        }
+      }
+
+    }
+    &.active {
+      left: 0;
+    }
+    .buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 15px 15px 0 0;
+      flex-direction: column;
+      gap: 15px;
+      border-top: 1px solid $yellow;
+
+      span {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        gap: 25px;
+        color: white;
+        font-size: 25px;
+      }
+      .container {
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+        display: flex;
+        height: 45px;
+        align-items: end;
+        .button {
+          width: 50%;
+        }
+      }
+
+    }
+  }
+
   .headerContent {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
     .container {
       display: flex;
       align-items: center;
       padding: 10px;
       width: 33.33%;
       min-height: 75px;
+
       &:nth-child(1) {
         justify-content: start;
+
+        .button {
+          gap: 5px;
+          color: $black;
+
+          svg {
+            font-size: 20px;
+            margin-bottom: 2px;
+            color: $black
+          }
+        }
       }
+
       &:nth-child(2) {
         justify-content: center;
         background-color: $yellow;
         width: 20%;
         border-radius: 10px;
       }
+
       &:nth-child(3) {
         justify-content: end;
       }
+
       img {
         width: 100%;
         object-position: center;
         object-fit: cover;
       }
+
       .menuBtn {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 10px;
         cursor: pointer;
+
         &:hover {
           svg {
             transform: scale(1.1);
           }
         }
+
         svg {
           transition: transform $transition;
           font-size: 40px;
@@ -62,6 +241,7 @@
       }
     }
   }
+
   .menuContainer {
     position: fixed;
     top: 0;
@@ -69,17 +249,19 @@
     background-color: $black;
     max-width: 60%;
     width: 100%;
-    transition: right 1s ease,opacity 0.8s ease;
+    transition: right 1s ease, opacity 0.8s ease;
     right: -100%;
     display: flex;
     opacity: 0;
     pointer-events: none;
     border-left: 1px solid $yellow;
+
     &.menuActive {
       right: 0;
       pointer-events: auto;
       opacity: 1;
     }
+
     .closeMenu {
       position: absolute;
       right: 25px;
@@ -93,28 +275,33 @@
           transform: scale(1.1) rotate(360deg);
         }
       }
+
       svg {
         transition: transform $transition;
         font-size: 40px;
         color: $yellow;
       }
     }
+
     .menuContent {
       display: flex;
       padding: 100px 0 0 150px;
       height: min-content;
       width: 100%;
+
       .titleContainer {
         display: flex;
         flex-direction: column;
         max-width: 400px;
         width: 100%;
+
         .menuItems {
           opacity: 0;
           transform: translateX(150%);
           display: flex;
           flex-direction: column;
-          transition: opacity 0.5s ease,transform 1s ease;
+          transition: opacity 0.5s ease, transform 1s ease;
+
           &.animated {
             opacity: 1;
             transform: translateX(0);
@@ -122,30 +309,36 @@
           }
 
         }
+
         .menuItem {
           font-size: 60px;
           color: white;
           transition: color $transition;
+
           svg {
             font-size: 50px;
             color: $yellow;
             margin-top: 15px;
           }
+
           &:hover {
             color: $yellow;
           }
         }
+
         .iconsContainer {
           display: flex;
           align-items: center;
           gap: 20px;
           margin-top: 10px;
+
           a {
-            &:hover{
+            &:hover {
               svg {
                 color: white;
               }
             }
+
             svg {
               font-size: 50px;
               color: $yellow;
@@ -154,6 +347,7 @@
           }
         }
       }
+
       .animatedContainer {
         display: flex;
         max-width: 400px;

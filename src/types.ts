@@ -19,10 +19,11 @@ export interface ProductDetail {
     rating: number;
     regularPrice: number | null;
     salePrice: number;
-    quantity: number ;
-    description: string,
-    "category" : string,
-    ingredients: string[]
+    quantity: number;
+    description: string;
+    category: string;
+    ingredients: string[];
+    count: number;
 }
 
 

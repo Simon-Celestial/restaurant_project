@@ -82,8 +82,10 @@ export const DetailsPage = () => {
                                     <SwiperSlide key={product?.id}>
                                         <div className={styles.productCard}>
                                             <div className={styles.productImage}>
-                                                <img src={product?.image}
-                                                     alt={product?.title}/>
+                                                <Link to={`/single-product/${product?.id}`}>
+                                                    <img src={product?.image}
+                                                         alt={product?.title}/>
+                                                </Link>
                                             </div>
                                             <div className={styles.productTitle}>
                                                 {product?.title}

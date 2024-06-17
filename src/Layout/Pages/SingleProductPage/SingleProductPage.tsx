@@ -1,17 +1,29 @@
 import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import styles from "./SingleProductPage.module.scss";
-import React, {useCallback, useContext, useMemo, useState} from "react";
+import {useCallback, useContext, useMemo, useState} from "react";
 import {DataContext} from "../../../Context/DataContext.tsx";
 import {Link, useParams} from "react-router-dom";
 import {Heart, MagnifyingGlass} from "@phosphor-icons/react";
 import {Box, Rating} from "@mui/material";
+import {BasketContext} from "../../../Context/BasketContext.tsx";
+import {WishListContext} from "../../../Context/WishListContext.tsx";
+
 
 export const SingleProductPage = () => {
 
     const {
         allProducts
     } = useContext(DataContext);
+    const {
+        addToCart
+    } = useContext(BasketContext);
+
+    const {
+        addToWishList,
+        wishListItems
+    } = useContext(WishListContext);
+
 
     const [imageScale, setImageScale] = useState(false);
 
@@ -23,7 +35,15 @@ export const SingleProductPage = () => {
 
     const currentProduct = useMemo(() => {
         return allProducts?.filter(product => product.id === id)
-    }, [allProducts])
+    }, [allProducts]);
+
+    const isProductInWishlist = useMemo(() => {
+        if (currentProduct && currentProduct.length > 0) {
+            const product = currentProduct[0];
+            return wishListItems.some(item => item.id === product.id);
+        }
+        return false;
+    }, [wishListItems, currentProduct]);
 
     return (
         <>
@@ -63,8 +83,16 @@ export const SingleProductPage = () => {
                                         </Box>
                                     </div>
                                     <div className={styles.buttonsBlock}>
-                                        <div className={`${styles.button} ${styles.blackBtn}`}>Add to cart</div>
-                                        <div className={`${styles.button} ${styles.blackBtn}`}><Heart/></div>
+                                        <div className={`${styles.button} ${styles.blackBtn}`}
+                                             onClick={() => addToCart(product)}>Add to cart
+                                        </div>
+                                        <div className={`${styles.button} ${styles.blackBtn}`}
+                                             onClick={() => addToWishList(product)}>
+                                            {isProductInWishlist ? <Heart weight="fill" />
+                                                :
+                                                <Heart/>
+                                            }
+                                        </div>
                                     </div>
                                     <span>Category: <p>{product?.category}</p></span>
                                     <span>Ingredients: <p>{product?.ingredients?.join(", ")}</p></span>

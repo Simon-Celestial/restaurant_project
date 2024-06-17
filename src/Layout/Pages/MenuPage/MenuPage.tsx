@@ -13,6 +13,8 @@ import {Box, Rating, Slider} from "@mui/material";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import {Link} from "react-router-dom";
+import {BasketContext} from "../../../Context/BasketContext.tsx";
+import {WishListContext} from "../../../Context/WishListContext.tsx";
 
 
 // PAGINATION
@@ -27,13 +29,20 @@ export const MenuPage = () => {
     const {
         allProducts
     } = useContext(DataContext);
+    const {
+        addToCart
+    } = useContext(BasketContext);
+    const {
+        wishListItems,
+        addToWishList
+    } = useContext(WishListContext);
+
 
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [stockValue, setStockValue] = React.useState('both');
     const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
     const [priceValue, setPriceValue] = React.useState<number[]>([0, 100]);
     const [currentPage, setCurrentPage] = useState(1);
-
 
 
     const handlePriceChange = useCallback((_event: Event, newValue: number | number[]) => {
@@ -120,6 +129,11 @@ export const MenuPage = () => {
         }
     }, [endIndex, priceFilteredData, setCurrentPage, itemsPerPage]);
 
+    const isProductInWishlist = useCallback((productId: string) => {
+        return wishListItems.some(item => item.id === productId);
+    }, [wishListItems]);
+
+
     return (
         <>
             <Header/>
@@ -164,8 +178,13 @@ export const MenuPage = () => {
                                     return (
                                         <div key={product?.id} className={styles.productCard}>
                                             <div className={styles.productImage}>
-                                                <div className={styles.wishItem}>
-                                                    <Heart />
+                                                <div className={styles.wishItem} onClick={() => addToWishList(product)}>
+                                                    {isProductInWishlist(product?.id) ?
+                                                        <Heart weight="fill"/>
+                                                        :
+                                                        <Heart/>
+
+                                                    }
                                                 </div>
                                                 <img src={product?.image} alt="Product"
                                                      style={{
@@ -192,13 +211,14 @@ export const MenuPage = () => {
                                                 <p>{product?.description}</p>
                                                 <Box
                                                     sx={{
-                                                        '& > legend': { mt: 2 },
+                                                        '& > legend': {mt: 2},
                                                     }}
                                                 >
-                                                    <Rating name="read-only" value={product?.rating} readOnly />
+                                                    <Rating name="read-only" value={product?.rating} readOnly/>
                                                 </Box>
                                                 <div className={styles.container}>
-                                                    <div className={`${styles.button} ${styles.yellowToOrangeBtn}`}>Add
+                                                    <div className={`${styles.button} ${styles.yellowToOrangeBtn}`}
+                                                         onClick={() => addToCart(product)}>Add
                                                         to cart
                                                     </div>
                                                 </div>
