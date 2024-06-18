@@ -15,7 +15,7 @@ import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import {ProductDetail} from "../../../types.ts";
 
-const WishlistPage = () => {
+export const WishlistPage = () => {
     const {
         wishListItems,
         removeFromWishList
@@ -42,7 +42,7 @@ const WishlistPage = () => {
                         <p>Your wishlist is currently empty.</p>
                         <div className={styles.container}>
                         <Link className={`${styles.button} ${styles.blackBtn}`} to="/menu">
-                            Return to Shop
+                            Return to Menu
                         </Link>
                         </div>
                     </div>
@@ -136,4 +136,3 @@ const WishlistPage = () => {
     )
 }
 
-export default WishlistPage;
