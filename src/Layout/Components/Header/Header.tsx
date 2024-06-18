@@ -77,7 +77,7 @@ export const Header = () => {
                     <span>Subtotal : <p>$ {calculateSubtotal?.toFixed(2)}</p></span>
                     <div className={styles.container}>
                         <Link to={"/cart"} className={`${styles.button} ${styles.yellowBtn}`}>Open cart</Link>
-                        <div className={`${styles.button} ${styles.yellowBtn}`}>Checkout</div>
+                        <Link to={"/checkout"} className={`${styles.button} ${styles.yellowBtn}`}>Checkout</Link>
                     </div>
                 </div>
 

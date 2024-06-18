@@ -107,7 +107,7 @@ export const BasketPage = () => {
                                     <p>$ {calculateSubtotal?.toFixed(2)}</p>
                                 </div>
                                 <div className={styles.rightContainer}>
-                                    <h1>Shipping</h1>
+                                    <h1>Delivery</h1>
                                     <p>FREE</p>
                                 </div>
                                 <div className={styles.rightContainer}>
