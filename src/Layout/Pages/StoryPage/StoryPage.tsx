@@ -2,8 +2,11 @@ import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import styles from "./StoryPage.module.scss";
 import {Link} from "react-router-dom";
+import {useEffect} from "react";
 
 export const StoryPage = () => {
+
+
     return (
         <>
             <Header/>
@@ -40,7 +43,7 @@ export const StoryPage = () => {
                             Whether you're grabbing a quick lunch or enjoying a casual dinner with friends, our burger
                             concept is the perfect spot for burger lovers of all kinds.</h5>
                         <div className={styles.container}>
-                            <Link to={"/franchising"} className={`${styles.button} ${styles.blackBtn}`}>join our family</Link>
+                            <Link to={"/careers"} className={`${styles.button} ${styles.blackBtn}`}>join our family</Link>
                         </div>
                         <div className={styles.wideImages}>
                             <img src="https://themewagon.github.io/burger/img/burgers/1.png" alt="story photo"/>

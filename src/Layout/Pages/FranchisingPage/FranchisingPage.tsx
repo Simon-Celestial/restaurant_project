@@ -1,8 +1,29 @@
 import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import styles from "./FranchisingPage.module.scss";
+import {useCallback, useRef} from "react";
+import {Bounce, toast} from "react-toastify";
 
 export const FranchisingPage = () => {
+
+    const franchiseForm = useRef<HTMLFormElement | null>(null);
+    const handleFranchise = useCallback((e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        toast.success(`Your franchise request has been sent, we will contact you shortly!`, {
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+        if (franchiseForm.current) {
+            franchiseForm.current.reset();
+        }
+    }, [])
+
+
     return (
         <>
             <Header/>
@@ -22,7 +43,7 @@ export const FranchisingPage = () => {
                         </h5>
                         <div className={styles.imageBlock}>
                             <img src="https://stackshack.co.uk/wp-content/uploads/2023/07/DSC03293-scaled.jpg"
-                                 alt="Photo"/>
+                                 alt="Franchise"/>
                         </div>
                         <p>We believe that franchising is a key part of our growth strategy. We are actively
                             seeking single and multi-site franchise operators who share our passion for providing
@@ -100,7 +121,11 @@ export const FranchisingPage = () => {
                         <h1>INTERESTED IN JOINING OUR FAMILY?</h1>
                         <p>If you're keen to be a part of our family operation with a successful franchising system,
                             complete the enquiry form, and we'll be in touch.</p>
-                        <div className={styles.formBox}>
+                        <form
+                            className={styles.formBox}
+                            ref={franchiseForm}
+                            onSubmit={handleFranchise}
+                        >
                             <div className={styles.formRow}>
                                 <div className={styles.formColumn}>
                                     <input type="text" placeholder={"first name*"} required/>
@@ -111,7 +136,8 @@ export const FranchisingPage = () => {
                                 </div>
                                 <div className={styles.formColumn}>
                                     <input type="text" placeholder={"last name*"} required/>
-                                    <input type="tel" placeholder={"telephone*"} required/>
+                                    <input type="tel" placeholder={"telephone* +994XXXXXXXXX "} required
+                                           pattern="\+994\d{9}"/>
                                     <input type="text" placeholder={"address line 2"}/>
                                     <input type="text" placeholder={"county*"} required/>
                                     <input type="text" placeholder={"country*"} required/>
@@ -130,9 +156,11 @@ export const FranchisingPage = () => {
                                 </div>
                             </div>
                             <div className={styles.container}>
-                                <button className={`${styles.button} ${styles.yellowToBlackBtn}`}>Submit</button>
+                                <button className={`${styles.button} ${styles.yellowToBlackBtn}`}
+                                        type={"submit"}>Submit
+                                </button>
                             </div>
-                        </div>
+                        </form>
                         <div className={styles.wideText}>“Best Food <p>I have ever had”</p></div>
                     </div>
                 </section>

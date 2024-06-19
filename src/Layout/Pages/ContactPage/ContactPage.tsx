@@ -3,8 +3,29 @@ import {Footer} from "../../Components/Footer/Footer.tsx";
 import styles from "./ContactPage.module.scss";
 import {Link} from "react-router-dom";
 import {FacebookLogo, InstagramLogo, TiktokLogo, TwitterLogo} from "@phosphor-icons/react";
+import {useCallback, useRef} from "react";
+import {Bounce, toast} from "react-toastify";
 
 export const ContactPage = () => {
+
+    const contactForm = useRef<HTMLFormElement | null>(null)
+
+    const handleSubmit = useCallback((e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        toast.success(`Thank you for your inquiry, we will reply soon.`, {
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+        if (contactForm.current) {
+            contactForm.current.reset();
+        }
+    }, [])
+
     return (
         <>
             <Header/>
@@ -37,7 +58,10 @@ export const ContactPage = () => {
                                 </a>
                             </div>
                         </div>
-                        <form className={styles.formBlock}>
+                        <form
+                            onSubmit={handleSubmit}
+                            ref={contactForm}
+                            className={styles.formBlock}>
                             <div className={styles.inputWrapper}>
                                 <input type="text" required placeholder={"name"}/>
                             </div>
@@ -45,7 +69,12 @@ export const ContactPage = () => {
                                 <input type="email" required placeholder={"email"}/>
                             </div>
                             <div className={styles.inputWrapper}>
-                                <input type="tel" required placeholder={"tel"}/>
+                                <input
+                                    type="tel"
+                                    required
+                                    placeholder={"tel : +994XXXXXXXXX"}
+                                    pattern="\+994\d{9}"
+                                />
                             </div>
                             <textarea placeholder={"message"} required/>
                             <div className={styles.container}>

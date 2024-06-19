@@ -3,9 +3,11 @@ import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import {Link} from "react-router-dom";
 import {DoubleSection} from "../../Common/DoubleSection/DoubleSection.tsx";
-import {useContext, useEffect, useState} from "react";
+import {useCallback, useContext, useEffect, useRef, useState} from "react";
 import {DataContext} from "../../../Context/DataContext.tsx";
 import {Loader} from "../../Common/Loader/Loader.tsx";
+import {Bounce, toast} from "react-toastify";
+
 
 
 export const HomePage = () => {
@@ -15,6 +17,9 @@ export const HomePage = () => {
 
     const [loading, setLoading] = useState(true);
 
+    const formRef = useRef<HTMLFormElement | null>(null);
+
+
     useEffect(() => {
 
         setTimeout(() => {
@@ -22,6 +27,27 @@ export const HomePage = () => {
         }, 3000)
 
     }, []);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const handleSubscribe = useCallback((e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        toast.success(`Successfully subscribed!`, {
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+        if (formRef.current) {
+            formRef.current.reset();
+        }
+    },[])
+
 
     return (
         <>
@@ -80,7 +106,7 @@ export const HomePage = () => {
                         <img src="/images/foodPlated.webp" alt="Spining Logo"/>
                         <h1>TODAY'S A GOURMET DAY</h1>
                         <div className={styles.container}>
-                            <Link to={"/"} className={`${styles.button} ${styles.blackBtn}`}>view our menu</Link>
+                            <Link to={"/menu"} className={`${styles.button} ${styles.blackBtn}`}>view our menu</Link>
                         </div>
                     </div>
                 </section>
@@ -122,23 +148,27 @@ export const HomePage = () => {
                             <img className={`${styles.decoration} ${styles.hotDog}`}
                                  src="https://stackshack.co.uk/wp-content/uploads/2023/03/TopDog.gif"
                                  alt="Animated Logo"/>
-                            <div className={styles.title}>
+                            <form
+                                onSubmit={handleSubscribe}
+                                className={styles.title}
+                                ref={formRef}
+                            >
                                 <h1>SIGN UP TO OUR NEWSLETTER</h1>
                                 <p>Don't worry we will not spam you</p>
                                 <div className={styles.inputWrapper}>
-                                    Name
-                                    <input type="text"/>
+                                    <p>Name <span>*</span></p>
+                                    <input type="text" required/>
                                 </div>
                                 <div className={styles.inputWrapper}>
-                                    Email
-                                    <input type="email"/>
+                                    <p>Email <span>*</span></p>
+                                    <input type="email" required/>
                                 </div>
                                 <div className={styles.inputWrapper}>
-                                    telephone
-                                    <input type="tel" placeholder={"+994XXXXXXXXX"}/>
+                                    <p>Telephone <span>*</span></p>
+                                    <input type="tel" placeholder={"+994XXXXXXXXX"} pattern="\+994\d{9}" required/>
                                 </div>
                                 <div className={styles.inputWrapper}>
-                                    your birthday?
+                                    <p>your birthday?</p>
                                     <input type="date"/>
                                 </div>
                                 <div className={styles.container}>
@@ -146,7 +176,7 @@ export const HomePage = () => {
                                             className={`${styles.button} ${styles.blackToWhiteBtn}`}>sign me up
                                     </button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
 
                     </div>

@@ -15,6 +15,7 @@ import {Link} from "react-router-dom";
 // @ts-expect-error
 import jobsData from "/public/data/JobsData/jobsData.json";
 import {Job, JobDetail} from "../../../types.ts";
+import {Bounce, toast} from "react-toastify";
 
 const Accordion = styled((props: AccordionProps) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -59,6 +60,19 @@ export const CareersPage = () => {
             setExpanded(newExpanded ? panel : false);
         }, [setExpanded]);
 
+
+    const handleAlert = useCallback(() => {
+        toast.error(`We apologise, this job is not available now`, {
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+
+    },[])
     return (
         <>
             <Header/>
@@ -100,7 +114,7 @@ export const CareersPage = () => {
                                     </Accordion>
                                 ))}
                                 <div className={styles.container}>
-                                    <Link to={"#"} className={`${styles.button} ${styles.blackBtn}`}>apply</Link>
+                                    <Link to={"#"} className={`${styles.button} ${styles.blackBtn}`} onClick={handleAlert}>apply</Link>
                                 </div>
                             </div>
                         ))}

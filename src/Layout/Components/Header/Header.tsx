@@ -131,7 +131,7 @@ export const Header = () => {
                                 contact
                             </Link>
                         </div>
-                        <a href="/" className={styles.menuItem}>
+                        <a href="tel:+994551234567" className={styles.menuItem} target={"_blank"}>
                             <Phone weight="fill"/>
                         </a>
                         <div className={styles.iconsContainer}>

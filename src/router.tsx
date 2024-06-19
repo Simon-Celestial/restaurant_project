@@ -83,7 +83,6 @@ const router = () => createBrowserRouter([
 
 ]);
 const MainRouter = () => {
-
     return <RouterProvider router={router()}/>;
 };
 

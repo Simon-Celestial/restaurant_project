@@ -135,9 +135,11 @@ export const CheckoutPage = () => {
                             <img src="/images/emptyCart.png" alt="Cart Empty"/>
                             <p>Your basket is empty</p>
                             <p>Add products to basket first</p>
-                            <Link to="/menu">
+                            <div className={styles.container}>
+                            <Link to="/menu" className={`${styles.button} ${styles.blackBtn}`}>
                                 Return to Menu
                             </Link>
+                            </div>
                         </div>
                         :
                         <section className={styles.checkoutSection}>
