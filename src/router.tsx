@@ -12,6 +12,7 @@ import {SingleProductPage} from "./Layout/Pages/SingleProductPage/SingleProductP
 import {WishlistPage} from "./Layout/Pages/WishlistPage/WishlistPage.tsx";
 import {BasketPage} from "./Layout/Pages/BasketPage/BasketPage.tsx";
 import {CheckoutPage} from "./Layout/Pages/CheckoutPage/CheckoutPage.tsx";
+import {CompletedPage} from "./Layout/Pages/CompletedPage/CompletedPage.tsx";
 
 
 const router = () => createBrowserRouter([
@@ -59,19 +60,23 @@ const router = () => createBrowserRouter([
             },
             {
                 path: 'single-product/:id',
-                element: <SingleProductPage />,
+                element: <SingleProductPage/>,
             },
             {
                 path: 'wishlist',
-                element: <WishlistPage />,
+                element: <WishlistPage/>,
             },
             {
                 path: 'cart',
-                element: <BasketPage />,
+                element: <BasketPage/>,
             },
             {
                 path: 'checkout',
                 element: <CheckoutPage/>
+            },
+            {
+                path: 'completed',
+                element: <CompletedPage/>
             }
         ],
     },

@@ -63,7 +63,7 @@ export const BasketContextProvider: React.FC<BasketContextProviderProps> = ({ ch
                 });
                 return [...prev];
             } else {
-                toast.success(`${product.title} added to basket`, {
+                toast.success(`${product?.title?.toUpperCase()} added to basket`, {
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: false,

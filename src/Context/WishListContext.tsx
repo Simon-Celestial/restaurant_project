@@ -35,7 +35,7 @@ export const WishListContextProvider: React.FC<WishListContextProviderProps> = (
         setWishListItems(prev => {
             const isExistingIndex = prev.findIndex(item => item.id === product.id);
             if (isExistingIndex === -1) {
-                toast.success(`${product.title} added to wishlist`, {
+                toast.success(`${product?.title?.toUpperCase()} added to wishlist`, {
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: false,

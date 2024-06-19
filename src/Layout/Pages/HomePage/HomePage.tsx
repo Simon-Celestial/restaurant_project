@@ -3,16 +3,33 @@ import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import {Link} from "react-router-dom";
 import {DoubleSection} from "../../Common/DoubleSection/DoubleSection.tsx";
-import {useContext} from "react";
+import {useContext, useEffect, useState} from "react";
 import {DataContext} from "../../../Context/DataContext.tsx";
+import {Loader} from "../../Common/Loader/Loader.tsx";
 
 
 export const HomePage = () => {
     const {
         products
     } = useContext(DataContext);
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+
+        setTimeout(() => {
+            setLoading(false);
+        }, 3000)
+
+    }, []);
+
     return (
         <>
+            {loading ?
+                <Loader/>
+                :
+                null
+            }
             <Header/>
             <main className={styles.mainWrapper}>
                 <section className={styles.videoSection}>
@@ -98,9 +115,13 @@ export const HomePage = () => {
                 />
                 <section className={styles.formSection} id="newsletter">
                     <div className={styles.sectionContent}>
-                        <div className={styles.blockWrapper} >
-                            <img className={`${styles.decoration} ${styles.sauce}`} src="https://stackshack.co.uk/wp-content/uploads/2023/03/SecretSauce.gif" alt="Animated logo"/>
-                            <img className={`${styles.decoration} ${styles.hotDog}`} src="https://stackshack.co.uk/wp-content/uploads/2023/03/TopDog.gif" alt="Animated Logo"/>
+                        <div className={styles.blockWrapper}>
+                            <img className={`${styles.decoration} ${styles.sauce}`}
+                                 src="https://stackshack.co.uk/wp-content/uploads/2023/03/SecretSauce.gif"
+                                 alt="Animated logo"/>
+                            <img className={`${styles.decoration} ${styles.hotDog}`}
+                                 src="https://stackshack.co.uk/wp-content/uploads/2023/03/TopDog.gif"
+                                 alt="Animated Logo"/>
                             <div className={styles.title}>
                                 <h1>SIGN UP TO OUR NEWSLETTER</h1>
                                 <p>Don't worry we will not spam you</p>
@@ -121,7 +142,9 @@ export const HomePage = () => {
                                     <input type="date"/>
                                 </div>
                                 <div className={styles.container}>
-                                    <button type={"submit"} className={`${styles.button} ${styles.blackToWhiteBtn}`}>sign me up</button>
+                                    <button type={"submit"}
+                                            className={`${styles.button} ${styles.blackToWhiteBtn}`}>sign me up
+                                    </button>
                                 </div>
                             </div>
                         </div>
