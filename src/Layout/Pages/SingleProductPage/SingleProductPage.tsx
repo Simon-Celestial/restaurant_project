@@ -1,7 +1,7 @@
 import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import styles from "./SingleProductPage.module.scss";
-import {useCallback, useContext, useEffect, useMemo, useState} from "react";
+import {useCallback, useContext, useMemo, useState} from "react";
 import {DataContext} from "../../../Context/DataContext.tsx";
 import {Link, useParams} from "react-router-dom";
 import {Heart, MagnifyingGlass} from "@phosphor-icons/react";

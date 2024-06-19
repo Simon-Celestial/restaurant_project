@@ -2,7 +2,6 @@ import {Header} from "../../Components/Header/Header.tsx";
 import {Footer} from "../../Components/Footer/Footer.tsx";
 import styles from "./StoryPage.module.scss";
 import {Link} from "react-router-dom";
-import {useEffect} from "react";
 
 export const StoryPage = () => {
 
@@ -32,7 +31,7 @@ export const StoryPage = () => {
                         <div className={styles.imageBlock}>
                             <img
                                 src="https://static.vecteezy.com/system/resources/previews/030/655/121/non_2x/vegetarian-fast-food-restaurant-with-colorful-free-photo.jpg"
-                                alt="Restaurant Photo"/>
+                                alt="Restaurant"/>
                         </div>
                         <p className={styles.wideText}>At GOURMET, we pride ourselves on using only fresh, never frozen
                             beef and chicken, along with locally-sourced produce whenever possible. Our buns are always
@@ -46,8 +45,8 @@ export const StoryPage = () => {
                             <Link to={"/careers"} className={`${styles.button} ${styles.blackBtn}`}>join our family</Link>
                         </div>
                         <div className={styles.wideImages}>
-                            <img src="https://themewagon.github.io/burger/img/burgers/1.png" alt="story photo"/>
-                            <img src="https://themewagon.github.io/burger/img/burgers/2.png" alt="story photo"/>
+                            <img src="https://themewagon.github.io/burger/img/burgers/1.png" alt="story"/>
+                            <img src="https://themewagon.github.io/burger/img/burgers/2.png" alt="story"/>
                         </div>
                     </div>
                 </section>
