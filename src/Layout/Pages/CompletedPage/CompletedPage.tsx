@@ -1,4 +1,4 @@
-import styles from "./CompletedOrder.module.scss";
+import styles from "./CompletedPage.module.scss";
 import {CheckCircle} from "@phosphor-icons/react";
 import {Link} from "react-router-dom";
 
