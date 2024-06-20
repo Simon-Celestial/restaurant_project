@@ -10,33 +10,39 @@
   background-color: $black;
   color: white;
   border-top: 1px solid $yellow;
-  .footerContent{
+
+  .footerContent {
     display: flex;
     width: 100%;
     gap: 25px;
     align-items: center;
+
     .textBlock {
       font-size: 55px;
       text-align: center;
       max-width: 550px;
       width: 100%;
-     }
-    .mailBlock{
+    }
+
+    .mailBlock {
       display: flex;
       flex-direction: column;
       gap: 10px;
       max-width: 600px;
       width: 100%;
+
       .mailItem {
         display: flex;
         flex-direction: column;
         gap: 5px;
         font-size: 20px;
-        a{
+
+        a {
           color: gray;
           font-size: 18px;
           transition: color $transition;
           width: min-content;
+
           &:hover {
             color: $yellow;
           }
@@ -44,16 +50,19 @@
       }
 
     }
+
     .iconsBlock {
       display: flex;
       margin-left: auto;
       flex-direction: column;
       gap: 15px;
+
       .icons {
         display: flex;
         gap: 10px;
         align-items: center;
         justify-content: end;
+
         a {
           &:hover {
             svg {
@@ -61,19 +70,87 @@
               transform: scale(1.1) rotate(360deg);
             }
           }
+
           svg {
             color: $yellow;
             font-size: 32px;
-            transition: color $transition,transform $transition;
+            transition: color $transition, transform $transition;
           }
         }
       }
+
       p {
         font-size: 22px;
         color: $yellow;
       }
     }
-
-
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .footerWrapper {
+    padding: 25px 15px;
+
+    .footerContent {
+      .textBlock {
+        font-size: 42px;
+      }
+
+      .mailBlock {
+        max-width: 400px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .footerWrapper {
+    .footerContent {
+      .textBlock {
+        font-size: 38px;
+      }
+
+      .mailBlock {
+        max-width: 300px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .footerWrapper {
+
+    .footerContent {
+      flex-direction: column;
+      align-items: start;
+      gap: 15px;
+      .textBlock {
+        text-align: start;
+      }
+
+      .iconsBlock {
+        margin: 0;
+        .icons {
+          justify-content: start;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .footerWrapper {
+
+    .footerContent {
+      .textBlock {
+        font-size: 33px;
+      }
+
+      .iconsBlock {
+        p {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+
 }

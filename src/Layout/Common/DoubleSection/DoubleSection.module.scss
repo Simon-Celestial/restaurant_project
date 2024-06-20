@@ -5,13 +5,11 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 50px 15px;
+  padding: 75px 15px;
   background-color: $cream;
   &.franchiseSection {
-    padding: 100px 15px;
     .sectionContent {
       .titleContainer {
-        padding: 100px 0;
         background-color: $black;
         order: 2;
         h1 {
@@ -30,6 +28,9 @@
     display: flex;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 0 10px gray;
+    max-height: 500px;
+
     .titleContainer {
       width: 100%;
       max-width: 570px;
@@ -39,6 +40,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      padding: 50px 15px;
       h1 {
         font-size: 120px;
         color: $black;
@@ -64,6 +66,110 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .doubleSection {
+    .sectionContent {
+      justify-content: center;
+      width: auto;
+      .titleContainer {
+        max-width: 450px;
+        h1 {
+          font-size: 80px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 30px;
+        }
+       }
+      .menuImg {
+        max-width: 450px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .doubleSection {
+    .sectionContent {
+      .titleContainer {
+        max-width: 350px;
+        h1 {
+          font-size: 50px;
+        }
+        p {
+          font-size: 15px;
+        }
+        .container{
+          height: 60px;
+        }
+      }
+      .menuImg {
+        max-width:350px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .doubleSection {
+    padding: 50px 15px;
+    .sectionContent {
+      flex-direction: column;
+      max-height: unset;
+      .titleContainer {
+        max-width: 500px;
+        padding: 50px 15px;
+        h1 {
+          font-size: 50px;
+        }
+      }
+      .menuImg {
+        max-width: 500px;
+        max-height: 350px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .doubleSection {
+    padding: 25px 15px;
+
+    .sectionContent {
+      .titleContainer {
+        max-width: 450px;
+        h1 {
+          font-size: 50px;
+        }
+      }
+      .menuImg {
+        max-width: 450px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .doubleSection {
+    .sectionContent {
+      .titleContainer {
+        max-width: 290px;
+        padding: 25px 15px;
+        h1 {
+          font-size: 50px;
+        }
+        p {
+          line-height: 20px;
+        }
+        .container{
+          height: 45px;
+        }
+      }
+      .menuImg {
+        max-width: 290px;
       }
     }
   }

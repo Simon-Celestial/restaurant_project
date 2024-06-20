@@ -86,7 +86,7 @@ export const Header = () => {
                 <div className={styles.container}>
                     <div className={`${styles.button} ${styles.yellowBtn}`} onClick={handleCartOpen}>
                         ({cartItems?.length})
-                        Cart
+                        <p>Cart</p>
                         <ShoppingCart weight="fill"/>
                     </div>
                 </div>

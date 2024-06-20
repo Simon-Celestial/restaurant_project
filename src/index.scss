@@ -9,7 +9,7 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden!important;
     display: flex;
     flex-direction: column;
     width: 100vw;

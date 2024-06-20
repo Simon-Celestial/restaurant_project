@@ -4,8 +4,6 @@ import styles from "./StoryPage.module.scss";
 import {Link} from "react-router-dom";
 
 export const StoryPage = () => {
-
-
     return (
         <>
             <Header/>
