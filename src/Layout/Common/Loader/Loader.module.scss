@@ -10,6 +10,7 @@
   width: 100vw;
   min-height: 100vh;
   z-index: 99999;
+  height: 100%;
   .loaderContent {
     display: flex;
     flex-direction: column;
@@ -25,6 +26,19 @@
       color: $yellow;
       max-width: 172px;
       width: 100%;
+      text-align: center;
+
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .loaderWrapper {
+    .loaderContent {
+      max-width: 200px;
+      p {
+        font-size: 40px;
+      }
     }
   }
 }

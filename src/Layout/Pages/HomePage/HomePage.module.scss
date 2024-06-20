@@ -338,6 +338,7 @@
         }
       }
     }
+
     .newsLetterSection {
       padding: 0 15px 75px 15px;
 
@@ -349,6 +350,47 @@
         .contentTitle {
           h1 {
             font-size: 80px;
+          }
+        }
+      }
+    }
+
+    .viewMenuSection {
+      .sectionContent {
+        img {
+          max-width: 350px;
+        }
+
+        h1 {
+          font-size: 100px;
+        }
+
+      }
+    }
+
+    .productsSection {
+      padding: 50px 15px 50px 15px
+    }
+
+    .formSection {
+      .sectionContent {
+        justify-content: center;
+
+        .blockWrapper {
+          max-width: 900px;
+
+          .decoration {
+            max-width: 230px;
+
+            &.sauce {
+              left: 0;
+              top: 15px;
+            }
+
+            &.hotDog {
+              right: 0;
+              top: 100px;
+            }
           }
         }
       }
@@ -384,6 +426,63 @@
 
           p {
             font-size: 22px;
+          }
+        }
+      }
+    }
+
+    .viewMenuSection {
+      .sectionContent {
+        img {
+          max-width: 300px;
+        }
+
+        h1 {
+          font-size: 80px;
+          margin-top: 0;
+        }
+
+      }
+    }
+
+    .productsSection {
+      .sectionContent {
+        gap: 25px;
+      }
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainWrapper {
+    .formSection {
+      .sectionContent {
+        .blockWrapper {
+          max-width: 700px;
+
+          .decoration {
+            max-width: 150px;
+
+            &.sauce {
+              top: 0;
+              left: 0;
+            }
+
+            &.hotDog {
+              top: 165px;
+            }
+          }
+
+          .title {
+            h1 {
+              font-size: 45px;
+            }
+
+            p {
+              font-size: 25px;
+            }
           }
         }
       }
@@ -431,12 +530,75 @@
             max-width: 400px;
             font-size: 22px;
           }
+
           .container {
             height: 50px;
           }
         }
       }
     }
+
+    .viewMenuSection {
+      padding: 0 15px 25px 15px;
+
+      .sectionContent {
+        img {
+          max-width: 250px;
+        }
+
+        h1 {
+          font-size: 60px;
+          margin-top: 0;
+          line-height: 20px;
+        }
+
+        .container {
+          height: 80px;
+        }
+
+      }
+    }
+
+    .productsSection {
+      padding: 25px 15px 25px 15px
+    }
+
+    .formSection {
+      .sectionContent {
+        .blockWrapper {
+          max-width: 500px;
+
+          .decoration {
+            max-width: 125px;
+
+            &.sauce {
+              top: unset;
+              bottom: 0;
+            }
+
+            &.hotDog {
+              top: unset;
+              bottom: -75px;
+            }
+          }
+
+          .title {
+            h1 {
+              font-size: 32px;
+            }
+
+            p {
+              font-size: 20px;
+            }
+
+            .container {
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+
 
   }
 }
@@ -466,6 +628,7 @@
 
       }
     }
+
     .newsLetterSection {
       padding: 0 15px 35px 15px;
 
@@ -488,8 +651,66 @@
       }
     }
 
+    .viewMenuSection {
+      .sectionContent {
+        h1 {
+          font-size: 40px;
+        }
+
+        .container {
+          height: 60px;
+        }
+
+      }
+    }
+
+    .formSection {
+      .sectionContent {
+        .blockWrapper {
+          max-width: 450px;
+        }
+      }
+    }
+
+
   }
 }
+
+@media screen and (max-width: 500px) {
+  .mainWrapper {
+    .formSection {
+      .sectionContent {
+        .blockWrapper {
+          max-width: 290px;
+
+          .decoration {
+            max-width: 100px;
+
+            &.hotDog {
+              bottom: -25px;
+            }
+          }
+
+          .title {
+            h1 {
+              line-height: 40px;
+            }
+
+            p {
+              margin-top: 15px;
+            }
+
+            .container {
+              height: 35px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
 
 @media screen and (max-width: 400px) {
   .mainWrapper {
@@ -501,6 +722,7 @@
         }
       }
     }
+
     .newsLetterSection {
       .sectionContent {
         img {
@@ -516,6 +738,20 @@
         }
       }
     }
+
+    .viewMenuSection {
+      .sectionContent {
+        h1 {
+          font-size: 32px;
+        }
+
+        .container {
+          height: 55px;
+        }
+
+      }
+    }
+
 
   }
 }

@@ -24,3 +24,11 @@
         right: 5px;
     }
 }
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 40px;
+        height: 40px;
+        right: -40px;
+
+    }
+}
