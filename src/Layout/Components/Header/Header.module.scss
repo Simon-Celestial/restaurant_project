@@ -339,6 +339,10 @@
           font-size: 60px;
           color: white;
           transition: color $transition;
+          &.active {
+            color: orangered!important;
+          }
+
 
           svg {
             font-size: 50px;
@@ -570,6 +574,19 @@
 }
 
 //MAX-HEIGHT
+@media screen and (max-height: 550px) {
+  .headerWrapper {
+    .cartWrapper {
+      height: 100vh;
+      .productsWrapper {
+        max-height: 280px;
+      }
+    }
+
+
+  }
+}
+
 @media screen and (max-height: 850px) {
   .headerWrapper {
     .menuContainer {

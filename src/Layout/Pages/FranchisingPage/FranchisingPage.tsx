@@ -110,14 +110,14 @@ export const FranchisingPage = () => {
                     </div>
                 </section>
                 <section className={styles.joinSection}>
-                    <div className={styles.joinContent}>
-                        <img className={`${styles.decoration} ${styles.sauce}`}
-                             src="https://stackshack.co.uk/wp-content/uploads/2023/03/SecretSauce.gif"
-                             alt="Decoration"/>
-                        <img className={`${styles.decoration} ${styles.wings}`}
-                             src="https://stackshack.co.uk/wp-content/uploads/2023/03/Wings.gif"
-                             alt="Decoration"/>
+                    <img className={`${styles.decoration} ${styles.sauce}`}
+                         src="https://stackshack.co.uk/wp-content/uploads/2023/03/SecretSauce.gif"
+                         alt="Decoration"/>
+                    <img className={`${styles.decoration} ${styles.wings}`}
+                         src="https://stackshack.co.uk/wp-content/uploads/2023/03/Wings.gif"
+                         alt="Decoration"/>
 
+                    <div className={styles.joinContent}>
                         <h1>INTERESTED IN JOINING OUR FAMILY?</h1>
                         <p>If you're keen to be a part of our family operation with a successful franchising system,
                             complete the enquiry form, and we'll be in touch.</p>

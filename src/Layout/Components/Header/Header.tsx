@@ -10,8 +10,13 @@ import {
     X
 } from "@phosphor-icons/react";
 import {useCallback, useContext, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {BasketContext} from "../../../Context/BasketContext.tsx";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import navData from "/public/data/NavigationData/NavigationData.json";
+import {NavDetails} from "../../../types.ts";
+
 
 export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -25,6 +30,8 @@ export const Header = () => {
         calculateSubtotal
     } = useContext(BasketContext);
 
+    const location = useLocation();
+
     const handleCartOpen = useCallback((): void => {
         setCartOpen(prev => !prev);
     }, [setCartOpen]);
@@ -32,6 +39,15 @@ export const Header = () => {
     const handleMenuOpen = useCallback((): void => {
         setMenuOpen(prev => !prev);
     }, [setMenuOpen]);
+
+
+    const handleCurrentPage = useCallback((navValue: string): boolean => {
+        if (navValue === "home") {
+            return location.pathname === "/"
+        } else {
+            return location.pathname === "/" + navValue
+        }
+    }, [location.pathname]);
 
 
     return (
@@ -49,7 +65,7 @@ export const Header = () => {
                     {cartItems?.map(item => {
                         return (
                             <div key={item?.id} className={styles.productCard}>
-                            <div className={styles.productTitle}>
+                                <div className={styles.productTitle}>
                                     <h2>{item?.title}</h2>
                                     <div className={styles.container}>
                                         <div className={styles.counter}>
@@ -60,7 +76,9 @@ export const Header = () => {
                                         </div>
                                         <span>$ {(item?.salePrice * item?.count)?.toFixed(2)}</span>
                                     </div>
-                                    <div className={`${styles.button}`} onClick={() => removeFromCart(item?.id)}>delete</div>
+                                    <div className={`${styles.button}`}
+                                         onClick={() => removeFromCart(item?.id)}>delete
+                                    </div>
                                 </div>
                                 <div className={styles.productImage}>
                                     <img
@@ -109,27 +127,14 @@ export const Header = () => {
                 <div className={styles.menuContent}>
                     <div className={`${styles.titleContainer}`}>
                         <div className={`${styles.menuItems} ${menuOpen ? styles.animated : ""}`}>
-                            <a href="/" className={styles.menuItem}>
-                                home
-                            </a>
-                            <Link to={"/story"} className={styles.menuItem}>
-                                story
-                            </Link>
-                            <Link to={"/wishlist"} className={styles.menuItem}>
-                                wishlist
-                            </Link>
-                            <Link to={"/menu"} className={styles.menuItem}>
-                                menu
-                            </Link>
-                            <Link to={"/careers"} className={styles.menuItem}>
-                                careers
-                            </Link>
-                            <Link to={"/franchising"} className={styles.menuItem}>
-                                franchising
-                            </Link>
-                            <Link to={"/contact"} className={styles.menuItem}>
-                                contact
-                            </Link>
+                            {navData?.map((nav: NavDetails) => {
+                                return (
+                                    <Link key={nav?.id} to={`${nav?.name === "home" ? "/" : "/" + nav?.name}`}
+                                          className={`${styles.menuItem} ${handleCurrentPage(nav?.name) ? styles.active : null}`}>
+                                        {nav?.name}
+                                    </Link>
+                                )
+                            })}
                         </div>
                         <a href="tel:+994551234567" className={styles.menuItem} target={"_blank"}>
                             <Phone weight="fill"/>

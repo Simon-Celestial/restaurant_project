@@ -4,12 +4,17 @@ export interface Product {
     name: string;
     description: string;
     type: string;
-    products: ProductDetail[] ;
+    products: ProductDetail[];
 }
 
 export interface JobDetail {
     header: string;
     content: string;
+}
+
+export interface NavDetails {
+    id: string;
+    name: string
 }
 
 export interface ProductDetail {

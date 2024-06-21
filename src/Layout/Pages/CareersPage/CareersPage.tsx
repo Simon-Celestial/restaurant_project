@@ -106,7 +106,7 @@ export const CareersPage = () => {
                                             <Typography>{detail?.header}</Typography>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            <Typography>
+                                            <Typography variant="body1" component="div">
                                                 <div className={styles.infoContainer}
                                                      dangerouslySetInnerHTML={{__html: detail?.content}}/>
                                             </Typography>
