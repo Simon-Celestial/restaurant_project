@@ -313,6 +313,12 @@
 @media screen and (max-width: 800px) {
   .basketMain {
     padding: 120px 15px 50px 15px;
+    .cartEmpty{
+      gap: 10px;
+      .container {
+        height: 45px;
+      }
+    }
 
     .basketContent {
       .basketCardsWrapper {

@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 165px 0 80px 0;
+  padding: 165px 15px 80px 15px;
   background: $cream;
   min-height: 100vh;
 
@@ -25,9 +25,12 @@
       object-position: center;
       width: 100%;
     }
+
     p {
       font-size: 25px;
+      text-align: center;
     }
+
     .container {
       display: flex;
       align-items: end;
@@ -38,7 +41,7 @@
 
   .wishlistCardsWrapper {
     display: flex;
-    max-width: 1410px;
+    max-width: 1200px;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -83,7 +86,7 @@
         }
 
         a {
-          font-size: 25px;
+          font-size: 22px;
           max-width: 510px;
           width: 100%;
           transition: color $transition;
@@ -95,7 +98,7 @@
       }
 
       .price {
-        max-width: 250px;
+        max-width: 200px;
 
         span {
           font-weight: 400;
@@ -258,67 +261,113 @@
   }
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
   .wishlistMain {
     .wishlistCardsWrapper {
-      padding: 40px;
-
       .tableRow {
-        .product {
-          max-width: 600px;
+        .price {
+          max-width: 150px;
+        }
+
+        .stock {
+          max-width: 120px;
+        }
+
+        .add {
+          max-width: 150px;
+        }
+
+        .delete {
+          max-width: 80px;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
+
   .wishlistMain {
+    padding: 100px 15px 75px 15px;
+    .wishlistEmpty {
+      gap: 10px;
+    }
+
     .wishlistCardsWrapper {
-      padding: 40px;
-
-      .topRow {
-        display: none;
-      }
-
       .tableRow {
         flex-direction: column;
+        align-items: start;
+        padding-bottom: 25px;
+
+        &.topRow {
+          display: none;
+        }
+
+        .cell {
+          padding: 5px 10px 10px 0;
+          margin: 0;
+        }
 
         .product {
-          width: 100%;
-          max-width: 100%;
+          max-width: unset;
+          flex-direction: column;
+          align-items: start;
+
+          img {
+            margin: 0;
+          }
+
+          a {
+            max-width: unset;
+          }
+
         }
 
         .price {
-          width: 100%;
-          max-width: 100%;
+          max-width: unset;
         }
 
         .stock {
-          width: 100%;
-          max-width: 100%;
+          max-width: unset;
         }
 
         .add {
-          width: 100%;
-          max-width: 100%;
-
-          .addToCart {
-            width: 100%;
-            max-width: 100%;
-          }
+          max-width: unset;
+          justify-content: start;
         }
 
         .delete {
-          width: 100%;
-          max-width: 100%;
+          max-width: unset;
+          justify-content: start;
+        }
+      }
+    }
+  }
+}
 
+
+@media screen and (max-width: 800px) {
+  .wishlistMain {
+    padding: 50px 15px 50px 15px;
+
+    .wishlistCardsWrapper {
+      .tableRow {
+        .add {
+          height: 50px;
+          align-items: end;
+        }
+
+        .delete {
           .deleteBtn {
-            width: 100%;
-            max-width: 100%;
+            height: 40px;
+            width: 40px;
+            svg {
+              font-size: 23px;
+            }
           }
         }
       }
     }
   }
+
 }

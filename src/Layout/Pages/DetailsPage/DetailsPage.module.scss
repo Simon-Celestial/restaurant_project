@@ -16,14 +16,17 @@
     flex-direction: column;
     align-items: center;
     color: $black;
+
     h1 {
       font-size: 115px;
       letter-spacing: 10px;
       line-height: 110px;
     }
+
     p {
       font-size: 32px;
     }
+
     .productsWrapper {
       display: flex;
       width: 100%;
@@ -35,6 +38,7 @@
         align-items: center;
         margin-top: 25px;
         padding-bottom: 50px;
+
         .productImage {
           width: 100%;
           max-width: 500px;
@@ -42,6 +46,7 @@
           align-items: center;
           justify-content: center;
           min-height: 480px;
+
           img {
             width: 100%;
             object-position: center;
@@ -49,6 +54,7 @@
           }
 
         }
+
         .productTitle {
           font-size: 52px;
         }
@@ -56,6 +62,7 @@
 
 
     }
+
     .container {
       display: flex;
       align-items: end;
@@ -63,5 +70,110 @@
     }
 
 
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .detailsWrapper {
+    padding: 150px 75px 50px  75px;
+     .detailsContent {
+        h1 {
+          font-size: 100px;
+        }
+
+        p {
+          font-size: 25px;
+        }
+       .productsWrapper {
+         .productCard {
+           .productImage {
+             max-width: 400px;
+             min-height: 400px;
+
+           }
+         }
+       }
+
+     }
+   }
+}
+
+@media screen and (max-width: 1200px){
+  .detailsWrapper {
+    padding: 150px 50px 50px  50px;
+
+    .detailsContent {
+      h1 {
+        font-size: 80px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+      .productsWrapper {
+        .productCard {
+          .productImage {
+            max-width: 350px;
+            min-height: 350px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  .detailsWrapper {
+    padding: 125px 25px 50px  25px;
+
+    .detailsContent {
+      h1 {
+        font-size: 50px;
+        text-align: center;
+        line-height: 65px;
+      }
+
+      p {
+        font-size: 20px;
+        text-align: center;
+
+      }
+      .productsWrapper {
+        .productCard {
+          .productImage {
+            max-width: 290px;
+            min-height: 290px;
+          }
+          .productTitle {
+            font-size: 40px;
+          }
+        }
+      }
+      .container {
+        height: 45px;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .detailsWrapper {
+    padding: 115px 15px 50px 15px;
+
+    .detailsContent {
+      .productsWrapper {
+        .productCard {
+          .productImage {
+            max-width: 250px;
+            min-height: 250px;
+          }
+          .productTitle {
+            font-size: 32px;
+          }
+        }
+      }
+    }
   }
 }

@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+
   .storySection {
     display: flex;
     width: 100%;
@@ -14,6 +15,7 @@
     padding: 165px 15px 75px 15px;
     align-items: center;
     background-color: $cream;
+
     .storyContent {
       display: flex;
       flex-direction: column;
@@ -21,48 +23,137 @@
       max-width: 1170px;
       align-items: center;
       color: $black;
+
       h1 {
         font-size: 125px;
         text-align: center;
       }
+
       p {
         font-size: 30px;
         text-align: center;
         max-width: 600px;
         margin-bottom: 35px;
+
         &.wideText {
           max-width: unset;
           margin-top: 25px;
         }
       }
+
       h5 {
         margin-bottom: 25px;
         font-size: 20px;
         font-weight: 400;
         text-align: center;
       }
+
       .imageBlock {
         width: 100%;
+
         img {
           width: 100%;
           object-fit: cover;
           object-position: center;
         }
       }
+
       .container {
         display: flex;
         align-items: end;
         height: 65px;
       }
+
       .wideImages {
         margin-top: 50px;
         width: 100%;
         display: flex;
         align-items: center;
+        gap: 15px;
+
         img {
           width: 50%;
           object-position: center;
           object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .storyMain {
+    .storySection {
+      .storyContent {
+        h1 {
+          font-size: 100px;
+          line-height: 100px;
+        }
+        p {
+          font-size: 25px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .storyMain {
+    .storySection {
+      padding: 135px 15px 50px 15px;
+
+      .storyContent {
+        h1 {
+          font-size: 80px;
+          line-height: 90px;
+        }
+        p {
+          font-size: 22px;
+          margin-bottom: 40px;
+        }
+        h5 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .storyMain {
+    .storySection {
+      padding: 100px 15px 50px 15px;
+
+      .storyContent {
+        h1 {
+          font-size: 60px;
+          line-height: 70px;
+        }
+        p {
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+        .imageBlock {
+          img {
+            box-shadow: 0 0 10px gray;
+
+          }
+
+        }
+        h5 {
+          font-size: 15px;
+          margin-bottom: 15px;
+        }
+        .container {
+          height: 45px;
+        }
+        .wideImages {
+          flex-direction: column;
+          margin-top: 25px;
+          gap: 35px;
+          img {
+            width: 100%;
+            box-shadow: 0 0 10px gray;
+          }
         }
       }
     }

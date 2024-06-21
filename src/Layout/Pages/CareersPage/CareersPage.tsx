@@ -72,7 +72,7 @@ export const CareersPage = () => {
             transition: Bounce,
         });
 
-    },[])
+    }, [])
     return (
         <>
             <Header/>
@@ -114,7 +114,8 @@ export const CareersPage = () => {
                                     </Accordion>
                                 ))}
                                 <div className={styles.container}>
-                                    <Link to={"#"} className={`${styles.button} ${styles.blackBtn}`} onClick={handleAlert}>apply</Link>
+                                    <Link to={"#"} className={`${styles.button} ${styles.blackBtn}`}
+                                          onClick={handleAlert}>apply</Link>
                                 </div>
                             </div>
                         ))}
